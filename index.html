@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>High-Performance Life Dashboard</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='80' font-size='80'>⚡</text></svg>">
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Mobil Üst Başlık (Top Header Bar) -->
+  <div class="mobile-header">
+    <div class="mobile-logo" onclick="document.querySelector('.nav-btn[data-t=\'dashboard\']').click()">
+      <div class="logo-icon-small">⚡</div>
+      <div class="logo-text-small">PERFORMANCE<span class="grad">HUB</span></div>
+    </div>
+    <div class="mobile-profile" onclick="document.querySelector('.nav-btn[data-t=\'dashboard\']').click()">
+      <div class="profile-info-small">
+        <span class="profile-rank-small" id="mobileProfileRank">Bilişsel Çırak</span>
+        <span class="profile-level-small" id="mobileProfileLevel">Lvl 1</span>
+      </div>
+      <div class="xp-bar-container-small">
+        <div class="xp-bar-small" id="mobileProfileXpBar" style="width: 0%;"></div>
+      </div>
+      <span class="xp-text-small" id="mobileProfileXpText">0 / 200 XP</span>
+    </div>
+  </div>
+
+  <!-- Premium Neon Side Navigation -->
+  <nav class="side-nav">
+    <div class="nav-logo">
+      <div class="logo-icon">⚡</div>
+      <div class="logo-text">PERFORMANCE<span class="grad">HUB</span></div>
+    </div>
+    <div class="nav-profile">
+      <div class="profile-info">
+        <span class="profile-rank" id="profileRank">Bilişsel Çırak</span>
+        <span class="profile-level" id="profileLevel">Lvl 1</span>
+      </div>
+      <div class="xp-bar-container">
+        <div class="xp-bar" id="profileXpBar" style="width: 0%;"></div>
+      </div>
+      <span class="xp-text" id="profileXpText">0 / 200 XP</span>
+    </div>
+    <div class="nav-menu">
+      <button data-t="dashboard" class="nav-btn active"><span class="icon">🏠</span><span class="text">Dashboard</span></button>
+      <button data-t="deepwork" class="nav-btn"><span class="icon">🧠</span><span class="text">Deep Work</span></button>
+      <button data-t="learning" class="nav-btn"><span class="icon">📚</span><span class="text">Aktif Öğrenme</span></button>
+      <button data-t="posture" class="nav-btn"><span class="icon">🧍</span><span class="text">Postür & Spor</span></button>
+      <button data-t="kanban" class="nav-btn"><span class="icon">💼</span><span class="text">Finansal Özgürlük</span></button>
+      <button data-t="sleep" class="nav-btn"><span class="icon">🌙</span><span class="text">Uyku & Sirkadiyen</span></button>
+    </div>
+    <div class="nav-footer">
+      High Performance Plan v1.0
+    </div>
+  </nav>
+
+  <!-- Main Content Area -->
+  <main class="main-content">
+    
+    <!-- 1. DASHBOARD SEKMESİ -->
+    <section id="sec-dashboard" class="sec-tab active">
+      <div class="header-row">
+        <div>
+          <h1>Günlük Performans Merkezi</h1>
+          <p class="sub">Huberman, Walker ve Newport protokolleriyle optimize edilmiş yaşam çizgisi.</p>
+        </div>
+        <div class="date-badge" id="currentDate">14 Haziran Pazar</div>
+      </div>
+
+      <div class="grid-2-1">
+        <!-- Sol: Timeline Zaman Çizelgesi -->
+        <div class="col-left">
+          <div class="card">
+            <h3>🗓️ Günlük Yaşam Çizgisi</h3>
+            <p class="sub">Saat saat planlanmış bilimsel sirkadiyen akış.</p>
+            <hr class="sep">
+            <div class="timeline" id="timelineList">
+              <!-- JS dinamik olarak dolduracak -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Sağ: Günlük Skor & Hızlı Bilgi -->
+        <div class="col-right">
+          <div class="card circular-progress-card">
+            <h3>🎯 Günlük Verimlilik Skoru</h3>
+            <div class="progress-container">
+              <svg class="circular-progress" viewBox="0 0 100 100">
+                <defs>
+                  <linearGradient id="progressGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="var(--cy)" />
+                    <stop offset="100%" stop-color="var(--pu)" />
+                  </linearGradient>
+                </defs>
+                <circle class="bg" cx="50" cy="50" r="45"></circle>
+                <circle class="bar" id="circularBar" cx="50" cy="50" r="45" stroke-dasharray="283" stroke-dashoffset="283"></circle>
+              </svg>
+              <div class="progress-text">
+                <span id="progressPct">0%</span>
+                <span class="lbl">Verimlilik</span>
+              </div>
+            </div>
+            <div class="stat-summary">
+              <div class="stat-item">
+                <span class="val" id="completedTasksCount">0</span>
+                <span class="lbl">Tamamlanan</span>
+              </div>
+              <div class="stat-item" style="border-left: 1px solid var(--border)">
+                <span class="val" id="totalTasksCount">12</span>
+                <span class="lbl">Toplam Görev</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="card quote-card">
+            <h3>💡 Gelişim Prensibi</h3>
+            <p class="quote-text" id="dailyQuote">"Deep Work, dikkatinizi dağıtmadan bilişsel olarak zorlayıcı bir göreve odaklanma yeteneğidir." - Cal Newport</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. DEEP WORK SEKMESİ -->
+    <section id="sec-deepwork" class="sec-tab">
+      <div class="header-row">
+        <div>
+          <h1>Deep Work & Dopamin Odası</h1>
+          <p class="sub">Yüksek zihinsel performans için ucuz dopaminden arın ve derinleş.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <!-- Sol: Ultradyan Pomodoro Sayacı -->
+        <div class="card pomo-card">
+          <h3>⏱️ Ultradyan Pomodoro</h3>
+          <p class="sub">90 dakika odaklanma + 20 dakika mola döngüsü.</p>
+          <div class="pomo-timer-display" id="pomoTime">90:00</div>
+          <div class="pomo-mode-badge" id="pomoPhase">Odak Turu</div>
+          <div class="btn-row center" style="margin-top: 20px">
+            <button class="btn primary" id="pomoBtn" onclick="togglePomo()">▶ Başlat</button>
+            <button class="btn ghost" onclick="resetPomo()">↺ Sıfırla</button>
+          </div>
+          <hr class="sep">
+          <div class="pomo-presets">
+            <button class="btn small ghost" onclick="setPomoPreset(90, 20)">90 dk / 20 dk (Önerilen)</button>
+            <button class="btn small ghost" onclick="setPomoPreset(50, 10)">50 dk / 10 dk (Klasik)</button>
+            <button class="btn small ghost" onclick="setPomoPreset(25, 5)">25 dk / 5 dk (Hafif)</button>
+          </div>
+        </div>
+
+        <!-- Sağ: Dopamin Detoksu Kontrol Listesi -->
+        <div class="card dopamin-card">
+          <h3>🚫 Ucuz Dopamin Kontrol Listesi</h3>
+          <p class="sub">Dopamin reseptörlerini hassaslaştırmak için bunları yapmaktan kaçın.</p>
+          <hr class="sep">
+          <div class="dopamin-list" id="dopaminList">
+            <!-- JS dinamik dolduracak -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. AKTİF ÖĞRENME SEKMESİ -->
+    <section id="sec-learning" class="sec-tab">
+      <div class="header-row">
+        <div>
+          <h1>Aktif Öğrenme (İngilizce & AI Prompting)</h1>
+          <p class="sub">Active Recall, Feynman Tekniği ve Spaced Repetition ile kalıcı bilgi.</p>
+        </div>
+      </div>
+
+      <div class="grid-2-1">
+        <!-- Sol: Spaced Repetition Flashcards -->
+        <div class="col-left">
+          <div class="card flashcard-card">
+            <div class="card-header-row">
+              <h3>🃏 Spaced Repetition Kartları (SM-2)</h3>
+              <div class="tab-options">
+                <button class="btn small ghost active" id="btnSrsReview" onclick="switchSrsTab('review')">Tekrar Et (<span id="dueSrsCount">0</span>)</button>
+                <button class="btn small ghost" id="btnSrsAdd" onclick="switchSrsTab('add')">Yeni Ekle</button>
+                <button class="btn small ghost" id="btnSrsList" onclick="switchSrsTab('list')">Kart Listesi</button>
+              </div>
+            </div>
+            <hr class="sep">
+
+            <!-- Tekrar Etme Alanı -->
+            <div id="srsReviewArea">
+              <!-- Hızlı Test ve Özel Çalışma Paneli -->
+              <div class="srs-test-controls" style="margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+                <label class="toggle-label" style="display:flex; align-items:center; gap:8px; cursor:pointer; font-size:0.85rem; color:var(--tx-secondary);">
+                  <input type="checkbox" id="srsFastMode" style="cursor:pointer;">
+                  <span>⚡ Hızlı Test Modu (Saniye Cinsinden)</span>
+                </label>
+                <button class="btn small ghost" id="btnCustomStudy" onclick="startCustomStudy()" style="display:none; border-color:var(--pu); color:var(--pu);">🔁 Tüm Desteyi Çalış</button>
+              </div>
+
+              <div class="flashcard" id="activeFlashcard" onclick="revealFlashcard()">
+                <div class="fc-category" id="fcCategory">Kategori</div>
+                <div class="fc-front" id="fcFront">Kelime veya Kural</div>
+                <div class="fc-back" id="fcBack" style="display: none;">
+                  <div class="fc-answer" id="fcAnswer">Cevap açıklaması</div>
+                  <div class="fc-example" id="fcExample">Örnek cümle veya kullanım.</div>
+                </div>
+              </div>
+              <div class="fc-grades" id="fcGrades" style="display: none;">
+                <button class="btn red" onclick="gradeFlashcard(1)">Zor</button>
+                <button class="btn cyan" onclick="gradeFlashcard(3)">Orta</button>
+                <button class="btn green" onclick="gradeFlashcard(5)">Kolay</button>
+              </div>
+            </div>
+
+            <!-- Kart Ekleme Alanı -->
+            <div id="srsAddArea" style="display: none;">
+              <div class="form-group">
+                <label>Kategori</label>
+                <select class="input" id="newFcCategory">
+                  <option value="İngilizce">🇬🇧 İngilizce Kelime / Kalıp</option>
+                  <option value="AI / Prompting">🤖 Prompt Mühendisliği / AI</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Soru / Kelime (Ön Yüz)</label>
+                <input type="text" class="input" id="newFcFront" placeholder="Örn: In the long run">
+              </div>
+              <div class="form-group">
+                <label>Anlamı / Cevap (Arka Yüz)</label>
+                <textarea class="textarea" id="newFcAnswer" placeholder="Örn: Uzun vadede, eninde sonunda"></textarea>
+              </div>
+              <div class="form-group">
+                <label>Örnek Cümle / Ek Bilgi</label>
+                <input type="text" class="input" id="newFcExample" placeholder="Örn: We will win in the long run.">
+              </div>
+              <button class="btn primary" onclick="addFlashcard()">💾 Kartı Kaydet</button>
+            </div>
+            
+            <!-- Kart Listesi Alanı -->
+            <div id="srsListArea" style="display: none;">
+              <div class="srs-list-container">
+                <table class="srs-table">
+                  <thead>
+                    <tr>
+                      <th>Kategori</th>
+                      <th>Ön Yüz (Soru)</th>
+                      <th>Arka Yüz (Cevap)</th>
+                      <th>Sonraki Tekrar</th>
+                      <th>İşlem</th>
+                    </tr>
+                  </thead>
+                  <tbody id="srsTableBody">
+                    <!-- JS dinamik olarak dolduracak -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sağ: Aktif Hatırlama & Feynman Defteri -->
+        <div class="col-right">
+          <div class="card notebook-card">
+            <h3>📓 Feynman Defteri</h3>
+            <p class="sub">Bir konuyu 10 yaşındaki bir çocuğa anlatır gibi basitçe açıkla.</p>
+            <hr class="sep">
+            <textarea class="textarea" id="feynmanNotes" style="min-height: 250px;" placeholder="Bugün öğrendiğin prompt tekniğini veya dil kalıbını buraya en basit kelimelerle özetle..." oninput="saveFeynmanNotes()"></textarea>
+            <div class="note-status" id="feynmanStatus">Kaydedildi</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. POSTÜR & SPOR SEKMESİ -->
+    <section id="sec-posture" class="sec-tab">
+      <div class="header-row">
+        <div>
+          <h1>Postür Düzeltme & Omurga Akademisi</h1>
+          <p class="sub">Masa başı çalışanlar için kinesiyolojik duruş düzeltme kütüphanesi.</p>
+        </div>
+      </div>
+
+      <div class="grid-2-1">
+        <!-- Sol: Egzersiz Listesi ve Görsel Animasyonlar -->
+        <div class="col-left">
+          <div class="card">
+            <h3>🧍 Kinesiyolojik Egzersizler</h3>
+            <p class="sub">Egzersizi seç, animasyonu izle ve kronometreyi başlat.</p>
+            <hr class="sep">
+            
+            <div class="posture-grid">
+              <!-- Egzersiz Seçici Kartları -->
+              <div class="posture-sidebar" id="postureList">
+                <!-- JS dolduracak -->
+              </div>
+
+              <!-- Animasyonlu SVG Ekranı -->
+              <div class="posture-display">
+                <div class="svg-container" id="postureSvgContainer">
+                  <!-- JS dinamik SVG yükleyecek -->
+                </div>
+                <div class="posture-details">
+                  <h4 id="postureTitle">Chin Tucks</h4>
+                  <p class="sub" id="postureTarget">Hedef: Boyun Düzleşmesi & İleri Kafa Duruşu</p>
+                  <p class="desc" id="postureDesc">Çenenizi geriye doğru çekerek boyun omurlarınızı hizalayın. Başınızı yukarı kaldırmadan çift çene oluşturmaya çalışın.</p>
+                  <div class="posture-sets" id="postureSets">3 Set x 10 Tekrar (Her tekrarda 5 sn bekle)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sağ: Egzersiz Kronometresi -->
+        <div class="col-right">
+          <div class="card timer-card">
+            <h3>⏱️ Egzersiz Süre Ölçer</h3>
+            <div class="pomo-timer-display" id="exerciseTimerDisplay">00:30</div>
+            <div class="btn-row center" style="margin-top: 15px">
+              <button class="btn primary" id="exerciseTimerBtn" onclick="toggleExerciseTimer()">▶ Başlat</button>
+              <button class="btn ghost" onclick="resetExerciseTimer()">↺ Sıfırla</button>
+            </div>
+            <hr class="sep">
+            <div class="pomo-presets">
+              <button class="btn small ghost" onclick="setExerciseTimerPreset(30)">30 Saniye</button>
+              <button class="btn small ghost" onclick="setExerciseTimerPreset(60)">60 Saniye</button>
+              <button class="btn small ghost" onclick="setExerciseTimerPreset(90)">90 Saniye</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. KANBAN FİNANSAL ÖZGÜRLÜK SEKMESİ -->
+    <section id="sec-kanban" class="sec-tab">
+      <div class="header-row">
+        <div>
+          <h1>Finansal Özgürlük Projeleri</h1>
+          <p class="sub">Yapılan Deep Work seanslarında AI araçlarıyla geliştirilen yan projeler (Kanban).</p>
+        </div>
+        <button class="btn primary" onclick="showNewProjectModal()">➕ Yeni Proje Ekle</button>
+      </div>
+
+      <!-- Kanban Board -->
+      <div class="kanban-board">
+        <!-- 1. Fikir -->
+        <div class="kanban-column" id="col-idea">
+          <div class="col-header idea">💡 Fikir Aşaması</div>
+          <div class="kanban-cards" id="cards-idea" ondragover="allowDrop(event)" ondrop="drop(event, 'idea')"></div>
+        </div>
+        <!-- 2. Geliştirme -->
+        <div class="kanban-column" id="col-dev">
+          <div class="col-header dev">🛠️ Geliştiriliyor</div>
+          <div class="kanban-cards" id="cards-dev" ondragover="allowDrop(event)" ondrop="drop(event, 'dev')"></div>
+        </div>
+        <!-- 3. Canlıda -->
+        <div class="kanban-column" id="col-live">
+          <div class="col-header live">🚀 Canlıda / Yayında</div>
+          <div class="kanban-cards" id="cards-live" ondragover="allowDrop(event)" ondrop="drop(event, 'live')"></div>
+        </div>
+        <!-- 4. Gelir Getiriyor -->
+        <div class="kanban-column" id="col-money">
+          <div class="col-header money">💰 Gelir Üretiyor</div>
+          <div class="kanban-cards" id="cards-money" ondragover="allowDrop(event)" ondrop="drop(event, 'money')"></div>
+        </div>
+      </div>
+
+      <!-- Yeni Proje Modalı -->
+      <div class="modal-overlay" id="projectModal" style="display: none;">
+        <div class="modal">
+          <h3>➕ Yeni Pasif Gelir Projesi</h3>
+          <div class="form-group">
+            <label>Proje Adı</label>
+            <input type="text" class="input" id="projName" placeholder="Örn: PDF Chatbot AI">
+          </div>
+          <div class="form-group">
+            <label>Proje Türü</label>
+            <select class="input" id="projType">
+              <option value="Mikro SaaS">⚙️ Mikro SaaS</option>
+              <option value="Dijital Ürün">📚 Dijital Ürün / E-Kitap</option>
+              <option value="AI Entegrasyonu">🤖 Yapay Zeka Aracı / API</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Açıklama</label>
+            <textarea class="textarea" id="projDesc" placeholder="AI API kullanarak PDF okuyan mikro araç..."></textarea>
+          </div>
+          <div class="btn-row" style="justify-content: flex-end;">
+            <button class="btn ghost" onclick="hideNewProjectModal()">İptal</button>
+            <button class="btn primary" onclick="addProject()">Ekle</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. UYKU & SİRKADİYEN SEKMESİ -->
+    <section id="sec-sleep" class="sec-tab">
+      <div class="header-row">
+        <div>
+          <h1>Sirkadiyen Ritim & Uyku Yönetimi</h1>
+          <p class="sub">90 dakikalık sirkadiyen döngülere göre uyku zamanlaması ve uyanış protokolleri.</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <!-- Sol Sütun: Kadran ve Hesaplayıcı -->
+        <div class="col-left-sleep" style="display:flex; flex-direction:column; gap:20px;">
+          <!-- Sirkadiyen Ritim Kadranı -->
+          <div class="card dial-card" style="text-align: center; margin-bottom:0;">
+            <h3>⏰ Sirkadiyen Ritim Kadranı</h3>
+            <p class="sub">Biyolojik saatiniz ve uyanışınıza göre anlık sirkadiyen fazınız.</p>
+            <hr class="sep">
+            
+            <div class="dial-wrapper" style="position:relative; display:inline-block; margin: 15px auto;">
+              <svg class="circadian-dial" id="circadianDialSvg" viewBox="0 0 200 200" width="220" height="220" style="display:block;">
+                <defs>
+                  <filter id="dialGlow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feGaussianBlur stdDeviation="3" result="blur"></feGaussianBlur>
+                    <feComposite in="SourceGraphic" in2="blur" operator="over"></feComposite>
+                  </filter>
+                </defs>
+                <!-- Düşük opaklıklı dış kılavuz -->
+                <circle cx="100" cy="100" r="80" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="8"></circle>
+                <!-- JS tarafından çizilecek sirkadiyen dilimler -->
+                <g id="dialSectors"></g>
+                <!-- Dönen Neon İbre (Pointer) -->
+                <line id="dialPointer" x1="100" y1="100" x2="100" y2="28" stroke="var(--cy)" stroke-width="3.5" stroke-linecap="round" filter="url(#dialGlow)" transform="rotate(0 100 100)"></line>
+                <circle cx="100" cy="100" r="7" fill="var(--cy)" filter="url(#dialGlow)"></circle>
+                <circle cx="100" cy="100" r="3" fill="#fff"></circle>
+              </svg>
+            </div>
+            
+            <div class="dial-center-card" style="margin-top:10px;">
+              <span class="sub" style="text-transform:uppercase; font-size:0.75rem; letter-spacing:0.05em; display:block; color:var(--pu);">Şu Anki Sirkadiyen Fazınız</span>
+              <strong id="currentDialPhase" style="font-family:var(--font-display); font-size:1.3rem; display:block; color:var(--tx-primary); margin: 4px 0;">Bilişsel Odak</strong>
+              <span class="time-badge" id="currentDialTime" style="font-family:var(--font-mono); font-size:0.85rem; color:var(--cy); font-weight:700;">21:54</span>
+            </div>
+          </div>
+
+          <!-- Sirkadiyen Ritim Hesaplayıcı -->
+          <div class="card" style="margin-bottom:0;">
+            <h3>⏱️ 90 Dakikalık Uyku Döngüsü Hesaplayıcı</h3>
+            <p class="sub">Uyanış saatine göre uykuya dalış saatini veya şimdi yatarsan uyanışını hesapla.</p>
+            <hr class="sep">
+            <div class="form-group">
+              <label>Sabah Uyanmak İstediğin Saat</label>
+              <div class="api-key-row">
+                <input type="time" class="input" id="wakeTime" value="06:00">
+                <button class="btn primary" onclick="calculateSleepTimes()">Hesapla</button>
+              </div>
+            </div>
+            <div class="form-group" style="margin-top: 16px;">
+              <label>Şu An Yatarsam Ne Zaman Uyanmalıyım?</label>
+              <button class="btn ghost" style="width: 100%;" onclick="calculateWakeTimesFromNow()">⚡ Şimdi Yatarsam Hesapla</button>
+            </div>
+            <div class="sleep-results" id="sleepResults">
+              <!-- JS dolduracak -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Sağ Sütun: Andrew Huberman Sirkadiyen Protokolleri -->
+        <div class="card">
+          <h3>☀️ Sirkadiyen Kaldıraç Takipçisi</h3>
+          <p class="sub">Bilişsel ve hormonal dengeyi optimize etmek için Huberman protokollerini tamamla.</p>
+          <hr class="sep">
+          <div class="circadian-levers-list" id="circadianLeversList">
+            <!-- JS dinamik olarak dolduracak -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
