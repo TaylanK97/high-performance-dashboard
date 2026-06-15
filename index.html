@@ -475,6 +475,36 @@
 
   </main>
 
+  <!-- Samsung Health Tarzı Bilim Rehberi Slide-Up Panel / Modal -->
+  <div class="science-sheet-overlay" id="scienceSheet" style="display: none;">
+    <div class="science-sheet">
+      <button class="sheet-close" onclick="hideScienceSheet()">✕</button>
+      <div class="sheet-header">
+        <span class="sheet-type-badge sleep" id="sheetBadge">SLEEP</span>
+        <h2 id="sheetTitle">Sirkadiyen Ritim Uyanış</h2>
+        <div class="sheet-time-badge">⏰ <span id="sheetTime">06:00 - 06:30</span></div>
+      </div>
+      
+      <hr class="sep">
+      
+      <div class="sheet-body">
+        <div class="sheet-section">
+          <h3>📋 Adım Adım Nasıl Uygulanır?</h3>
+          <ul class="step-list" id="sheetDetailsList">
+            <!-- Dinamik doldurulacak -->
+          </ul>
+        </div>
+        
+        <div class="sheet-section science-box">
+          <h3>🔬 Bilimsel Temeli (Neden Yapmalıyım?)</h3>
+          <p id="sheetScienceText">
+            <!-- Dinamik doldurulacak -->
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="toast" id="toast"></div>
 
   <script src="app.js"></script>

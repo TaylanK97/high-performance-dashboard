@@ -4,18 +4,177 @@
 // 1. STATİK BİLGİ VE EGZERSİZ VERİLERİ
 // ==========================================================================
 const DAILY_ROUTINE = [
-  { id: "r_1", time: "06:00 - 06:30", title: "Sirkadiyen Ritim Uyanış", desc: "10 dk güneş ışığı, hidrasyon, esneme.", type: "sleep", xp: 10 },
-  { id: "r_2", time: "06:30 - 08:00", title: "Deep Work: Pasif Gelir Geliştirme", desc: "Mikro SaaS / yan proje odaklı 90 dk çalışma.", type: "deepwork", xp: 30 },
-  { id: "r_3", time: "08:00 - 08:30", title: "Duruş Düzeltme & Omurga Sağlığı", desc: "Biyomekanik egzersiz rutini (30 dk).", type: "posture", xp: 20 },
-  { id: "r_4", time: "08:30 - 09:00", title: "Bilişsel Beslenme & Planlama", desc: "Düşük karbonhidratlı kahvaltı, hedeflerin gözden geçirilmesi.", type: "other", xp: 10 },
-  { id: "r_5", time: "09:00 - 10:30", title: "Deep Work: AI & Prompt Mühendisliği", desc: "Yapay zeka araçları ve entegrasyon pratikleri (90 dk).", type: "learning", xp: 30 },
-  { id: "r_6", time: "10:30 - 12:00", title: "Deep Work: Aktif Dil Öğrenimi", desc: "İngilizce kelime ve kalıp çalışmaları (90 dk).", type: "learning", xp: 30 },
-  { id: "r_7", time: "12:00 - 13:00", title: "Fiziksel Antrenman (HIIT / Güç)", desc: "Duruş düzeltici esnemelerle güç idmanı.", type: "posture", xp: 20 },
-  { id: "r_8", time: "13:00 - 14:00", title: "Beslenme & Zihinsel Dinlenme", desc: "Yemek ve hafif yürüyüş.", type: "other", xp: 10 },
-  { id: "r_9", time: "14:00 - 17:30", title: "Hafif İşler & İletişim", desc: "E-postalar, sosyal hayat ve dopamin detoksu.", type: "other", xp: 15 },
-  { id: "r_10", time: "17:30 - 18:30", title: "Gün Batımı Işığı & Sirkadiyen Ritim", desc: "Melatonin sentezi için gözlerin akşam ışığı alması.", type: "sleep", xp: 10 },
-  { id: "r_11", time: "19:00 - 21:00", title: "Zihinsel Kapanış & Kitap Okuma", desc: "Ekransız dinlenme.", type: "other", xp: 10 },
-  { id: "r_12", time: "21:00 - 22:00", title: "Matthew Walker Uyku Hijyeni", desc: "Mavi ışık yasağı, tavan ışıklarını kapatma.", type: "sleep", xp: 15 }
+  { 
+    id: "r_1", 
+    time: "06:00 - 06:30", 
+    title: "Sirkadiyen Ritim Uyanış", 
+    desc: "10 dk güneş ışığı, hidrasyon, esneme.", 
+    type: "sleep", 
+    xp: 10,
+    details: [
+      "Yataktan kalkar kalkmaz 1-2 dakika hafifçe esne.",
+      "Balkona, bahçeye veya pencere önüne geçip gökyüzüne bak.",
+      "Gözüne direkt ışık gelsin ama güneşe doğrudan bakıp gözünü yakma.",
+      "Camın arkasından değil, açık havada en az 10 dakika kal (bulutlu havada 15-20 dk).",
+      "Yarım litre oda sıcaklığında su iç."
+    ],
+    science: "Gözündeki özel hücreler sabah gün ışığını algılayınca beyne 'sabah oldu' sinyali gönderir. Beyin hemen uykuyu dağıtan 'Kortizol' hormonunu salgılar. Aynı zamanda, yaklaşık 16 saat sonra salgılanacak olan uyku hormonu 'Melatonin' için geri sayım sayacını başlatır. Yani kaliteli bir gece uykusu sabah başlar!"
+  },
+  { 
+    id: "r_2", 
+    time: "06:30 - 08:00", 
+    title: "Deep Work: Pasif Gelir Geliştirme", 
+    desc: "Mikro SaaS / yan proje odaklı 90 dk çalışma.", 
+    type: "deepwork", 
+    xp: 30,
+    details: [
+      "Telefonunu başka bir odaya koy veya tamamen sessize al.",
+      "Çalışacağın konuyu veya kod bloğunu önceden belirle.",
+      "90 dakika boyunca tarayıcında sadece çalışacağın sekmeleri açık tut.",
+      "Dikkatini dağıtacak hiçbir bildirime bakma."
+    ],
+    science: "Cal Newport'un 'Pürüzsüz Odaklanma' teorisine göre, dikkatini her dağıttığında (örneğin telefona 2 saniye bakmak) beynin eski odağına geri dönmesi tam 20 dakika sürer. Kesintisiz 90 dakika çalışarak 'Akış' (Flow) durumuna geçersin ve normalde 5 saatte yapacağın işi bitirirsin."
+  },
+  { 
+    id: "r_3", 
+    time: "08:00 - 08:30", 
+    title: "Duruş Düzeltme & Omurga Sağlığı", 
+    desc: "Biyomekanik egzersiz rutini (30 dk).", 
+    type: "posture", 
+    xp: 20,
+    details: [
+      "Boyun hizalaması için 10 set Chin Tuck egzersizi yap.",
+      "Kamburluğu önlemek için duvara yaslanıp 12 set Wall Angel yap.",
+      "Masa başı kısalan kalça kaslarını (psoas) germek için Lunge Stretch yap.",
+      "Her egzersizde kaslarındaki yanmayı ve gerilmeyi hisset."
+    ],
+    science: "Saatlerce ekrana bakmak boyun kaslarını uzatır, göğüs kaslarını kısaltır. Bu durum 'İleri Kafa Duruşu' ve kamburluğa yol açar. Düzeltici egzersizler, bu zayıf kasları uyararak omurgayı doğal hizasına çeker, akciğer kapasiteni ve beyne giden kan akışını artırır."
+  },
+  { 
+    id: "r_4", 
+    time: "08:30 - 09:00", 
+    title: "Bilişsel Beslenme & Planlama", 
+    desc: "Düşük karbonhidratlı kahvaltı, hedeflerin gözden geçirilmesi.", 
+    type: "other", 
+    xp: 10,
+    details: [
+      "Yumurta, avokado gibi sağlıklı yağ ve protein içeren düşük karbonhidratlı beslen.",
+      "Günlük en kritik 3 hedefini (Kanban) belirle.",
+      "Gereksiz şekerli gıdalardan uzak dur."
+    ],
+    science: "Sabah yediğin şeker ve basit karbonhidratlar kan şekerini hızla yükseltip ardından aniden düşürür. Bu durum 'beyin sisi'ne ve öğlen uykusunun gelmesine neden olur. Protein ve sağlıklı yağlar ise beynine saatlerce stabil ve temiz enerji sağlar."
+  },
+  { 
+    id: "r_5", 
+    time: "09:00 - 10:30", 
+    title: "Deep Work: AI & Prompt Mühendisliği", 
+    desc: "Yapay zeka araçları ve entegrasyon pratikleri (90 dk).", 
+    type: "learning", 
+    xp: 30,
+    details: [
+      "AI modellerini (Gemini, Claude vb.) kullanarak pratik yap.",
+      "Yeni prompt tekniklerini test et.",
+      "Geliştirdiğin projeleri AI API'leri ile entegre et."
+    ],
+    science: "Yapay zeka araçlarını kullanmak zihinsel bir çarpan etkisi yaratır. Ancak bu araçları verimli kullanabilmek için net, yapılandırılmış yönergeler (prompting) tasarlamak gerekir. Bu seans, geleceğin teknoloji dünyasında iş yapma yeteneğini 10 katına çıkarır."
+  },
+  { 
+    id: "r_6", 
+    time: "10:30 - 12:00", 
+    title: "Deep Work: Aktif Dil Öğrenimi", 
+    desc: "İngilizce kelime ve kalıp çalışmaları (90 dk).", 
+    type: "learning", 
+    xp: 30,
+    details: [
+      "Yeni kelimeleri SM-2 kart sistemine ekle.",
+      "Daha önce öğrendiğin kelimeleri test et.",
+      "Kelimeleri sesli telaffuz ederek 'Feynman Tekniği' ile cümle içinde kullan."
+    ],
+    science: "Spaced Repetition (Aralıklı Tekrar) hafızadaki 'unutma eğrisi'ni kırar. Bilgiyi tam unutmak üzereyken tekrar etmek, o bilginin beynindeki nöronlar arasında kalıcı yollar oluşturmasını sağlar ve geçici hafızadan kalıcı hafızaya taşır."
+  },
+  { 
+    id: "r_7", 
+    time: "12:00 - 13:00", 
+    title: "Fiziksel Antrenman (HIIT / Güç)", 
+    desc: "Duruş düzeltici esnemelerle güç idmanı.", 
+    type: "posture", 
+    xp: 20,
+    details: [
+      "Vücudunu ısıtmak için 5 dakika hafif kardiyo yap.",
+      "Bileşik egzersizler (Squat, şınav vb.) ile kaslarını uyar.",
+      "Nabzını yükseltmek için kısa süreli HIIT setleri ekle."
+    ],
+    science: "Günün bu saatinde vücut sıcaklığın ve kas koordinasyonun zirvededir. Yapacağın antrenman büyüme hormonu ve testosteron salınımını tetikler, kas tonusunu korur ve zihinsel yorgunluğu sıfırlayarak günün ikinci yarısı için enerji pompalar."
+  },
+  { 
+    id: "r_8", 
+    time: "13:00 - 14:00", 
+    title: "Beslenme & Zihinsel Dinlenme", 
+    desc: "Yemek ve hafif yürüyüş.", 
+    type: "other", 
+    xp: 10,
+    details: [
+      "Öğle yemeğini acele etmeden, çiğneyerek ye.",
+      "Yemekten sonra 10-15 dakika hafif tempoda yürüyüş yap.",
+      "Ekrana veya telefona bakmadan zihnini dinlendir."
+    ],
+    science: "Yemek sonrası yürüyüş, sindirimi hızlandırır ve kasların glikozu emmesini sağlayarak kan şekeri dalgalanmalarını (yemek sonrası gelen ağırlığı) önler. Ayrıca ekransız dinlenme, beynin varsayılan modunu (Default Mode Network) aktif ederek yaratıcı fikirler üretmesini sağlar."
+  },
+  { 
+    id: "r_9", 
+    time: "14:00 - 17:30", 
+    title: "Hafif İşler & İletişim", 
+    desc: "E-postalar, sosyal hayat ve dopamin detoksu.", 
+    type: "other", 
+    xp: 15,
+    details: [
+      "E-postaları cevapla, mesajları kontrol et.",
+      "Sosyal etkileşimlerini planla.",
+      "Ucuz dopamin kaynaklarından (sosyal medya kaydırma) uzak dur."
+    ],
+    science: "Öğleden sonra zihinsel enerji sabah saatlerine göre daha düşüktür. Bu yüzden yüksek odak gerektirmeyen, rutin ve iletişim odaklı işleri bu saate planlamak zihinsel enerjiyi verimli kullanmayı sağlar. Bu saatte dopamin reseptörlerini korumak akşam motivasyonunu yüksek tutar."
+  },
+  { 
+    id: "r_10", 
+    time: "17:30 - 18:30", 
+    title: "Gün Batımı Işığı & Sirkadiyen Ritim", 
+    desc: "Melatonin sentezi için gözlerin akşam ışığı alması.", 
+    type: "sleep", 
+    xp: 10,
+    details: [
+      "Akşamüstü güneş batarken dışarı çıkıp 10-15 dakika gökyüzüne bak.",
+      "Gözlerine akşam ışığının sarı/turuncu tonlarının girmesine izin ver."
+    ],
+    science: "Gün batımı ışığının sarı ve turuncu dalga boyları, gözdeki hücreler üzerinden beyne 'gün bitiyor' mesajı gönderir. Bu sinyal, beyni geceleri melatonin (uyku hormonu) üretmeye hazırlar ve mavi ışığın vereceği zararlara karşı gözü koruyucu bir kalkan gibi sarar."
+  },
+  { 
+    id: "r_11", 
+    time: "19:00 - 21:00", 
+    title: "Zihinsel Kapanış & Kitap Okuma", 
+    desc: "Ekransız dinlenme.", 
+    type: "other", 
+    xp: 10,
+    details: [
+      "Tüm teknolojik cihazları ve parlak ekranları bir kenara bırak.",
+      "Loş bir ışıkta kitap oku veya sohbet et.",
+      "Zihnini günün stresinden arındır."
+    ],
+    science: "Geceleri ekrana bakmak, beyne hala öğle vakti olduğunu düşündürür. Ekransız kalarak beynin dalgalarını yavaşlatır, Alfa ve Teta dalgalarına geçişi kolaylaştırırsın. Bu da uykuya geçiş süresini kısaltır ve derin uykuyu uzatır."
+  },
+  { 
+    id: "r_12", 
+    time: "21:00 - 22:00", 
+    title: "Matthew Walker Uyku Hijyeni", 
+    desc: "Mavi ışık yasağı, tavan ışıklarını kapatma.", 
+    type: "sleep", 
+    xp: 15,
+    details: [
+      "Odadaki tüm parlak tavan ışıklarını kapat, loş zemin aydınlatmalarına geç.",
+      "Yatak odasını havalandır ve sıcaklığı 18-19 dereceye ayarla.",
+      "Uyumadan önceki son 1 saatte hiçbir ekrana bakma."
+    ],
+    science: "Matthew Walker'a göre kaliteli uyku için iki anahtar vardır: Karanlık ve Serinlik. Parlak ışık melatonini bıçak gibi keser. Vücudun uykuya dalabilmesi için çekirdek sıcaklığının 1 derece düşmesi gerekir, bu yüzden serin bir oda uyku derinliğini 2 kat artırır."
+  }
 ];
 
 const EXERCISES = [
@@ -389,7 +548,10 @@ function renderDashboard() {
         <strong>${esc(r.title)}</strong>
         <p class="sub" style="margin-top: 2px">${esc(r.desc)}</p>
       </div>
-      <div class="chk-box">${isDone ? "✔" : ""}</div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <button class="info-btn" onclick="event.stopPropagation(); showScienceSheet('${r.id}', false)" title="Bilimsel Açıklama ve Detaylı Plan">ℹ️</button>
+        <div class="chk-box">${isDone ? "✔" : ""}</div>
+      </div>
     `;
     list.appendChild(div);
   });
@@ -932,6 +1094,57 @@ function hideNewProjectModal() {
   $("projectModal").style.display = "none";
 }
 
+function showScienceSheet(itemId, isLever) {
+  const item = isLever 
+    ? CIRCADIAN_LEVERS.find(l => l.id === itemId)
+    : DAILY_ROUTINE.find(r => r.id === itemId);
+
+  if (!item) return;
+
+  $("sheetTitle").textContent = item.title;
+  $("sheetTime").textContent = item.time;
+  
+  const badge = $("sheetBadge");
+  if (badge) {
+    if (isLever) {
+      badge.textContent = "SİRKADİYEN KALDIRAÇ";
+      badge.className = `sheet-type-badge ${item.badge || 'other'}`;
+    } else {
+      badge.textContent = item.type.toUpperCase();
+      badge.className = `sheet-type-badge ${item.type}`;
+    }
+  }
+
+  // Render step-by-step details
+  const detailsList = $("sheetDetailsList");
+  detailsList.innerHTML = "";
+  if (item.details && item.details.length > 0) {
+    item.details.forEach(step => {
+      const li = document.createElement("li");
+      li.innerHTML = `<span class="bullet">⚡</span> <span class="step-text">${esc(step)}</span>`;
+      detailsList.appendChild(li);
+    });
+  } else {
+    detailsList.innerHTML = `<li><span class="bullet">⚡</span> <span class="step-text">${esc(item.desc)}</span></li>`;
+  }
+
+  // Render scientific explanation
+  $("sheetScienceText").textContent = item.science || "Bu aktivite sirkadiyen ritmini ve bilişsel odağını optimize etmek için bilimsel olarak tasarlanmıştır.";
+
+  const sheet = $("scienceSheet");
+  sheet.style.display = "flex";
+  setTimeout(() => sheet.classList.add("open"), 10);
+  playSound("success");
+}
+
+function hideScienceSheet() {
+  const sheet = $("scienceSheet");
+  sheet.classList.remove("open");
+  setTimeout(() => {
+    sheet.style.display = "none";
+  }, 300);
+}
+
 function addProject() {
   const name = $("projName").value.trim();
   const type = $("projType").value;
@@ -1021,11 +1234,75 @@ function describeArc(x, y, radius, startAngle, endAngle) {
 }
 
 const CIRCADIAN_LEVERS = [
-  { id: "l_1", title: "Sabah Gün Işığı", time: "06:00 - 06:30", desc: "Uyanışta ilk 30 dk içinde en az 10-15 dk doğrudan güneş ışığı alımı.", xp: 10, badge: "sun" },
-  { id: "l_2", title: "Derin Hidrasyon", time: "06:30", desc: "Sabah kalkınca mineralli (bir çimdik tuzlu) su tüketimi.", xp: 10, badge: "water" },
-  { id: "l_3", title: "Kafein Geciktirme", time: "09:00", desc: "Kafein alımını uyanıştan 90-120 dakika sonraya erteleme.", xp: 10, badge: "coffee" },
-  { id: "l_4", title: "Gün Batımı Işığı", time: "17:30 - 18:30", desc: "Akşam saatlerinde gün batımı ışığı alarak melatonini tetikleme.", xp: 10, badge: "evening" },
-  { id: "l_5", title: "Mavi Işık Kısıtlaması", time: "21:00", desc: "Uykudan 2 saat önce tüm parlak tavan ışıklarını ve ekranları kapatma.", xp: 15, badge: "dark" }
+  { 
+    id: "l_1", 
+    title: "Sabah Gün Işığı", 
+    time: "06:00 - 06:30", 
+    desc: "Uyanışta ilk 30 dk içinde en az 10-15 dk doğrudan güneş ışığı alımı.", 
+    xp: 10, 
+    badge: "sun",
+    details: [
+      "Uyanır uyanmaz ilk 30 dakika içinde dışarı çık veya balkona geç.",
+      "En az 10-15 dakika doğrudan gökyüzüne bak (bulutlu havalarda 20-30 dakika).",
+      "Cam arkasından bakma, çünkü cam dalga boylarını filtreler."
+    ],
+    science: "Sabah ışığı gözden girerek beyindeki sirkadiyen saati kurar. Bu sayede gün boyu enerjik olur, gece ise tam saatinde uykun gelerek derin uyursun. Huberman'ın 1 numaralı sağlık protokolüdür."
+  },
+  { 
+    id: "l_2", 
+    title: "Derin Hidrasyon", 
+    time: "06:30", 
+    desc: "Sabah kalkınca mineralli (bir çimdik tuzlu) su tüketimi.", 
+    xp: 10, 
+    badge: "water",
+    details: [
+      "Sabah ilk iş 500ml temiz su iç.",
+      "Suyun içine bir çimdik kaya tuzu veya deniz tuzu ekle (hücresel hidrasyon için).",
+      "Suyu yavaş yavaş, yudumlayarak tüket."
+    ],
+    science: "Gece uyurken terleme ve nefes yoluyla yaklaşık 1 litre su kaybedersin. Sabah kalktığında hücrelerin susuzdur ve bu halsizlik yaratır. Mineralli su, hücrelerin elektriksel dengesini hızla kurarak beyin sisini anında dağıtır."
+  },
+  { 
+    id: "l_3", 
+    title: "Kafein Geciktirme", 
+    time: "09:00", 
+    desc: "Kafein alımını uyanıştan 90-120 dakika sonraya erteleme.", 
+    xp: 10, 
+    badge: "coffee",
+    details: [
+      "Uyanır uyanmaz hemen kahve veya çay içme.",
+      "İlk kafein alımını uyanışından en az 90-120 dakika sonraya ertele.",
+      "Bu sürede su ve mineral alımına odaklan."
+    ],
+    science: "Vücutta 'Adenozin' adı verilen bir uyku kimyasalı birikir. Sabah uyandığında kalan adenozinler doğal olarak temizlenir. Eğer hemen kahve içersen kafein adenozini bloke eder ama yok etmez. Kahvenin etkisi geçince (öğleden sonra) biriken tüm adenozinler hücum eder ve 'crash' yaşarsın (çöküş). 90 dk beklemek bunu önler."
+  },
+  { 
+    id: "l_4", 
+    title: "Gün Batımı Işığı", 
+    time: "17:30 - 18:30", 
+    desc: "Akşam saatlerinde gün batımı ışığı alarak melatonini tetikleme.", 
+    xp: 10, 
+    badge: "evening",
+    details: [
+      "Akşamüstü (17:30 - 18:30 arası) açık havaya çık.",
+      "Gözlüksüz şekilde gün batımı renklerini 10-15 dakika izle."
+    ],
+    science: "Akşamüstü güneşin düşük açılı ışıkları, melatonin salgılanma zamanlamasını kalibre eder. Bu sayede sirkadiyen ritmin tam 24 saatlik bir döngüde stabil kalır ve mevsim geçişlerindeki yorgunlukları önler."
+  },
+  { 
+    id: "l_5", 
+    title: "Mavi Işık Kısıtlaması", 
+    time: "21:00", 
+    desc: "Uykudan 2 saat önce tüm parlak tavan ışıklarını ve ekranları kapatma.", 
+    xp: 15, 
+    badge: "dark",
+    details: [
+      "Saat 21:00'den sonra tüm tavan ışıklarını kapat.",
+      "Sadece göz hizasının altında kalan loş sarı/kırmızı zemin lambalarını kullan.",
+      "Telefon ve televizyon kullanımını minimuma indir veya mavi ışık filtresini aç."
+    ],
+    science: "Tavan ışıkları beynimiz için 'güneş tam tepede' anlamına gelir ve melatonini anında sıfırlar. Loş ve kırmızımsı ışıklar ise ilkel dönemdeki kamp ateşi etkisi yaratarak beyni dinlenme ve uyku fazına sokar."
+  }
 ];
 
 const DIAL_PHASES = [
@@ -1128,11 +1405,14 @@ function renderCircadianLevers() {
     div.onclick = () => toggleCircadianCheck(l.id);
     div.innerHTML = `
       <div class="badge ${l.badge}">${l.time}</div>
-      <div style="flex-grow: 1;">
+      <div style="flex-grow: 1; margin-right: 8px;">
         <strong>${esc(l.title)} (+${l.xp} XP)</strong>
         <p class="sub">${esc(l.desc)}</p>
       </div>
-      <div class="chk-box">${isChecked ? "✔" : ""}</div>
+      <div style="display:flex; align-items:center; gap:12px;">
+        <button class="info-btn" onclick="event.stopPropagation(); showScienceSheet('${l.id}', true)" title="Bilimsel Açıklama ve Detaylı Plan">ℹ️</button>
+        <div class="chk-box">${isChecked ? "✔" : ""}</div>
+      </div>
     `;
     list.appendChild(div);
   });
@@ -1248,6 +1528,14 @@ window.onload = () => {
   renderDashboard();
   renderCircadianLevers();
   calculateSleepTimes(); // Bu fonksiyon içinde drawCircadianDial çağrılır
+  
+  // Bilim rehberi overlay dışına tıklanınca kapatma dinleyicisi
+  const sheet = $("scienceSheet");
+  if (sheet) {
+    sheet.onclick = (e) => {
+      if (e.target === sheet) hideScienceSheet();
+    };
+  }
   
   setInterval(drawCircadianDial, 30000);
 };
