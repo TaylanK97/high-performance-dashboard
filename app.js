@@ -201,13 +201,41 @@ const EXERCISES = [
     ],
     science: "Boyun omurlarını (cervical spine) stabilize eden derin boyun bükücü kasları (deep cervical flexors) izometrik olarak güçlendirir. Masa başında çalışırken gerilen suboksipital kasları uzatarak ileri kafa duruşunun (forward head posture) yarattığı mekanik stresi nötralize eder ve servikal disk üzerindeki yükü dengeler.",
     svg: `<svg viewBox="0 0 200 200" width="100%" height="100%">
-      <path d="M 60 170 L 60 120 Q 60 90 90 90" fill="none" stroke="var(--tx-secondary)" stroke-width="6" />
+      <defs>
+        <marker id="arrow-cy" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--cy)" />
+        </marker>
+      </defs>
+      <!-- Arka Plan Kılavuz Grid -->
+      <line x1="20" y1="170" x2="185" y2="170" stroke="rgba(255,255,255,0.05)" stroke-width="2" />
+      <line x1="60" y1="20" x2="60" y2="180" stroke="rgba(255,255,255,0.03)" stroke-dasharray="3 3" />
+      
+      <!-- Torso / Sırt Üstü Sabit Kısım -->
+      <path d="M 40 170 C 40 150, 50 130, 60 120" fill="none" stroke="var(--tx-secondary)" stroke-width="7" stroke-linecap="round" />
+      
+      <!-- Boyun (Esneyen/Doğrulan Kısım) -->
+      <path class="chin-tucks-neck" d="M 60 120 Q 65 95, 75 75" fill="none" stroke="var(--tx-secondary)" stroke-width="6" stroke-linecap="round" />
+      
+      <!-- Derin Boyun Flexor Kası (Ön Kısım - Kasılma Efekti) -->
+      <path class="chin-tucks-muscle-front" d="M 66 115 Q 70 95, 78 80" fill="none" stroke="var(--gr)" stroke-width="3" stroke-linecap="round" opacity="0.3" />
+
+      <!-- Alt Kafatası Esneme Bölgesi (Suboksipital - Dalga Efekti) -->
+      <circle class="chin-tucks-stretch-glow" cx="58" cy="72" r="8" fill="var(--rd)" opacity="0.1" />
+
+      <!-- Hareketli Baş Grubu -->
       <g class="chin-tucks-head">
-        <circle cx="100" cy="70" r="30" fill="var(--bg-card-hover)" stroke="var(--pu)" stroke-width="4" />
-        <path d="M 100 100 Q 115 100 115 90 L 120 70" fill="none" stroke="var(--pu)" stroke-width="4" />
-        <circle cx="115" cy="65" r="2" fill="var(--cy)" />
+        <!-- Kafatası -->
+        <circle cx="75" cy="55" r="24" fill="rgba(167, 139, 250, 0.1)" stroke="var(--pu)" stroke-width="3" />
+        <!-- Çene, Ağız ve Burun Profili -->
+        <path d="M 90 73 C 90 73, 98 70, 94 62 C 92 58, 99 56, 99 53 C 99 50, 92 48, 93 42 C 94 36, 88 33, 85 32" fill="none" stroke="var(--pu)" stroke-width="3" stroke-linecap="round" />
+        <!-- Göz -->
+        <circle cx="85" cy="48" r="2" fill="var(--cy)" />
+        <!-- Kulak -->
+        <circle cx="72" cy="56" r="5" fill="none" stroke="var(--tx-muted)" stroke-width="2" />
       </g>
-      <line x1="125" y1="30" x2="125" y2="130" stroke="rgba(255, 255, 255, 0.05)" stroke-dasharray="4 4" />
+
+      <!-- Yönlendirici Neon Ok -->
+      <path class="chin-tucks-arrow" d="M 125 55 L 102 55" fill="none" stroke="var(--cy)" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow-cy)" />
     </svg>`
   },
   {
@@ -225,12 +253,47 @@ const EXERCISES = [
     ],
     science: "Pektoral (göğüs) kasları esnetirken rhomboid ve alt trapezius kaslarını aktive eder. Torasik (üst sırt) mobilitesini artırarak masa başı çalışanlarda sıkça görülen torasik kifozu (kamburluğu) düzeltir ve omuz ekleminin subakromiyal alanını genişleterek sıkışma sendromunu önler.",
     svg: `<svg viewBox="0 0 200 200" width="100%" height="100%">
-      <line x1="80" y1="20" x2="80" y2="180" stroke="rgba(255, 255, 255, 0.1)" stroke-width="4" />
-      <line x1="84" y1="80" x2="84" y2="150" stroke="var(--tx-secondary)" stroke-width="6" />
-      <circle cx="84" cy="60" r="12" fill="var(--bg-card-hover)" stroke="var(--pu)" stroke-width="4" />
-      <g class="wall-angels-arms">
-        <path d="M 84 80 Q 110 90 120 70 Q 130 50 110 30" fill="none" stroke="var(--cy)" stroke-width="4" />
+      <defs>
+        <marker id="arrow-up" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <path d="M 5 0 L 10 10 L 0 10 z" fill="var(--cy)" />
+        </marker>
+      </defs>
+      <!-- Duvar Kılavuzu (Arka Duvar Izgarası) -->
+      <rect x="25" y="20" width="150" height="160" fill="rgba(255,255,255,0.01)" stroke="rgba(255,255,255,0.05)" stroke-width="1.5" />
+      <line x1="100" y1="20" x2="100" y2="180" stroke="rgba(255,255,255,0.03)" />
+
+      <!-- Sabit Baş ve Gövde -->
+      <circle cx="100" cy="50" r="14" fill="rgba(167, 139, 250, 0.1)" stroke="var(--tx-secondary)" stroke-width="3" />
+      <path d="M 75 80 L 125 80 L 115 150 L 85 150 z" fill="rgba(255, 255, 255, 0.02)" stroke="var(--tx-secondary)" stroke-width="4.5" stroke-linejoin="round" />
+      <line x1="100" y1="80" x2="100" y2="150" stroke="rgba(255,255,255,0.1)" stroke-width="2" /> <!-- Omurga -->
+
+      <!-- Sıkışan Kürek Kemikleri (Rhomboids - Kasılma Parıltısı) -->
+      <path class="wall-angels-muscle-left" d="M 82 90 Q 90 105, 96 90" fill="none" stroke="var(--rd)" stroke-width="4.5" stroke-linecap="round" opacity="0.2" />
+      <path class="wall-angels-muscle-right" d="M 118 90 Q 110 105, 104 90" fill="none" stroke="var(--rd)" stroke-width="4.5" stroke-linecap="round" opacity="0.2" />
+
+      <!-- Sol Kol Grubu (Rotasyonlu) -->
+      <g class="wall-angels-arm-left">
+        <!-- Omuzdan Dirseğe -->
+        <line x1="75" y1="85" x2="48" y2="105" stroke="var(--pu)" stroke-width="5" stroke-linecap="round" />
+        <!-- Dirsekten Ele -->
+        <line x1="48" y1="105" x2="38" y2="62" stroke="var(--cy)" stroke-width="4.5" stroke-linecap="round" />
+        <!-- El Noktası -->
+        <circle cx="38" cy="62" r="4" fill="#fff" />
       </g>
+
+      <!-- Sağ Kol Grubu (Rotasyonlu) -->
+      <g class="wall-angels-arm-right">
+        <!-- Omuzdan Dirseğe -->
+        <line x1="125" y1="85" x2="152" y2="105" stroke="var(--pu)" stroke-width="5" stroke-linecap="round" />
+        <!-- Dirsekten Ele -->
+        <line x1="152" y1="105" x2="162" y2="62" stroke="var(--cy)" stroke-width="4.5" stroke-linecap="round" />
+        <!-- El Noktası -->
+        <circle cx="162" cy="62" r="4" fill="#fff" />
+      </g>
+
+      <!-- Hareket Yönü Okları -->
+      <path class="wall-angels-arrow-l" d="M 32 105 Q 22 85, 30 65" fill="none" stroke="var(--cy)" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arrow-up)" />
+      <path class="wall-angels-arrow-r" d="M 168 105 Q 178 85, 170 65" fill="none" stroke="var(--cy)" stroke-width="2" stroke-dasharray="3 3" marker-end="url(#arrow-up)" />
     </svg>`
   },
   {
@@ -248,11 +311,41 @@ const EXERCISES = [
     ],
     science: "Saatlerce oturma pozisyonunda kalmak, kalça bükücü (psoas ve iliacus) kaslarının kronik olarak kısalmasına yol açar. Bu kısalık pelvik yapıyı öne doğru çekerek anterior pelvik tilt (ördek popo) duruşuna ve bel (lumbar) lordozunun artmasına, dolayısıyla bel ağrılarına neden olur. Bu germe egzersizi psoas kasının boyunu uzatarak pelvik halkayı nötr hizasına getirir.",
     svg: `<svg viewBox="0 0 200 200" width="100%" height="100%">
-      <line x1="20" y1="160" x2="180" y2="160" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2" />
+      <defs>
+        <marker id="arrow-right" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <path d="M 0 1 L 10 5 L 0 9 z" fill="var(--cy)" />
+        </marker>
+      </defs>
+      <!-- Yer Tabanı -->
+      <line x1="15" y1="165" x2="185" y2="165" stroke="rgba(255,255,255,0.08)" stroke-width="2.5" />
+
+      <!-- Hareket Eden Tüm Vücut Grubu (Kalça İtilmesi ile) -->
       <g class="lunge-stretch-body">
-        <circle cx="90" cy="60" r="12" fill="var(--bg-card-hover)" stroke="var(--pu)" stroke-width="4" />
-        <path d="M 90 72 L 90 110 L 130 160 M 90 110 L 60 120 L 60 160" fill="none" stroke="var(--tx-secondary)" stroke-width="5" />
+        <!-- Baş ve Gövde -->
+        <circle cx="85" cy="50" r="13" fill="rgba(167, 139, 250, 0.1)" stroke="var(--tx-secondary)" stroke-width="3" />
+        <path d="M 85 63 C 85 63, 83 95, 83 105" fill="none" stroke="var(--tx-secondary)" stroke-width="5.5" stroke-linecap="round" />
+        
+        <!-- Arka Bacak (Esneme Açısı Değişen) -->
+        <!-- Kalçadan Dize (Uyluk) -->
+        <line x1="83" y1="105" x2="55" y2="135" stroke="var(--pu)" stroke-width="5" stroke-linecap="round" />
+        <!-- Dizden Ayağa (Kaval) -->
+        <path d="M 55 135 L 55 165 L 35 165" fill="none" stroke="var(--tx-secondary)" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+        
+        <!-- Ön Bacak (Destek) -->
+        <!-- Kalçadan Dize -->
+        <line x1="83" y1="105" x2="115" y2="115" stroke="var(--tx-secondary)" stroke-width="5" stroke-linecap="round" />
+        <!-- Dizden Ayak Bileğine -->
+        <line x1="115" y1="115" x2="115" y2="165" stroke="var(--tx-secondary)" stroke-width="4.5" stroke-linecap="round" />
+        <!-- Ayak -->
+        <line x1="115" y1="165" x2="135" y2="165" stroke="var(--tx-secondary)" stroke-width="4.5" stroke-linecap="round" />
+
+        <!-- Psoas / Kalça Bükücü Kas (Esneme Bölgesi) -->
+        <path class="lunge-psoas-muscle" d="M 82 92 Q 74 110, 58 132" fill="none" stroke="var(--rd)" stroke-width="4.5" stroke-linecap="round" opacity="0.2" />
+        <circle class="lunge-psoas-glow" cx="68" cy="120" r="10" fill="var(--rd)" opacity="0.05" />
       </g>
+
+      <!-- Kalçayı Öne İten Yönlendirici Neon Ok -->
+      <path class="lunge-force-arrow" d="M 45 95 L 72 95" fill="none" stroke="var(--cy)" stroke-width="3.5" stroke-linecap="round" marker-end="url(#arrow-right)" />
     </svg>`
   },
   {
@@ -270,11 +363,41 @@ const EXERCISES = [
     ],
     science: "Oturarak geçirilen uzun saatler kalça kaslarında 'gluteal amnezi'ye (ölü kalça sendromu) yol açar. Kalça aktifleşmediğinde, vücut yükü bel ve hamstrig kaslarına yükler. Glute bridge egzersizi kalça kaslarını izole ederek aktive eder, pelvik stabilizasyonu artırır ve lumbar omurga üzerindeki mekanik baskıyı azaltarak alt sırtı korur.",
     svg: `<svg viewBox="0 0 200 200" width="100%" height="100%">
-      <line x1="20" y1="150" x2="180" y2="150" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2" />
+      <defs>
+        <marker id="arrow-up-bridge" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+          <path d="M 5 0 L 10 10 L 0 10 z" fill="var(--cy)" />
+        </marker>
+      </defs>
+      <!-- Yer Zemin Çizgisi -->
+      <line x1="15" y1="160" x2="185" y2="160" stroke="rgba(255,255,255,0.08)" stroke-width="2" />
+
+      <!-- Sabit Baş, Omuzlar ve Kollar -->
+      <circle cx="45" cy="148" r="10" fill="rgba(167, 139, 250, 0.1)" stroke="var(--tx-secondary)" stroke-width="3" />
+      <path d="M 45 155 L 70 155" fill="none" stroke="var(--tx-secondary)" stroke-width="5" stroke-linecap="round" />
+      <path d="M 40 158 L 85 158" fill="none" stroke="var(--tx-muted)" stroke-width="3" stroke-linecap="round" /> <!-- Kol -->
+
+      <!-- Sabit Ayaklar -->
+      <path d="M 145 160 L 155 160" fill="none" stroke="var(--tx-secondary)" stroke-width="5.5" stroke-linecap="round" />
+
+      <!-- Kaldırılan Kalça Grubu -->
       <g class="glute-bridge-hips">
-        <path d="M 50 145 L 80 145 Q 120 120 150 145" fill="none" stroke="var(--tx-secondary)" stroke-width="5" />
-        <circle cx="40" cy="140" r="10" fill="var(--bg-card-hover)" stroke="var(--pu)" stroke-width="4" />
+        <!-- Sırt ve Uyluk Birleşimi -->
+        <line x1="70" y1="155" x2="105" y2="145" stroke="var(--tx-secondary)" stroke-width="5" stroke-linecap="round" class="bridge-spine" />
+        <!-- Kalça -->
+        <circle cx="105" cy="145" r="9" fill="none" stroke="var(--tx-secondary)" stroke-width="4.5" />
+        <!-- Uyluk (Kalçadan Dize) -->
+        <line x1="105" y1="145" x2="140" y2="115" stroke="var(--tx-secondary)" stroke-width="5.5" stroke-linecap="round" class="bridge-thigh" />
+        <!-- Kaval (Dizden Ayak Bileğine) -->
+        <line x1="140" y1="115" x2="148" y2="160" stroke="var(--tx-secondary)" stroke-width="5" stroke-linecap="round" />
+
+        <!-- Gluteus Maximus Kası (Kalça Kasılması - Aktifleşme Efekti) -->
+        <path class="bridge-glute-muscle" d="M 98 152 A 8 8 0 0 0 112 140" fill="none" stroke="var(--gr)" stroke-width="5" stroke-linecap="round" opacity="0.3" />
+        <!-- Hamstring Kası (Arka Uyluk) -->
+        <path class="bridge-hamstring-muscle" d="M 112 140 L 132 122" fill="none" stroke="var(--gr)" stroke-width="3.5" stroke-linecap="round" opacity="0.2" />
       </g>
+
+      <!-- Yönlendirici Yukarı Ok -->
+      <path class="bridge-arrow" d="M 105 158 L 105 125" fill="none" stroke="var(--cy)" stroke-width="3" stroke-linecap="round" marker-end="url(#arrow-up-bridge)" />
     </svg>`
   },
   {
