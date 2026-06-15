@@ -1601,7 +1601,7 @@ hr.sep {
    ========================================================================== */
 
 /* Genişleyen Kart Temel Stilleri */
-.time-item.expanded, .protocol-item.expanded {
+.time-item.expanded, .protocol-item.expanded, .dop-item.expanded {
   display: flex !important;
   flex-direction: column !important;
   align-items: flex-start !important;

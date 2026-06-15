@@ -193,16 +193,20 @@ const EXERCISES = [
     desc: "Çenenizi geriye doğru çekerek boyun omurlarınızı hizalayın. Başınızı yukarı kaldırmadan çift çene oluşturmaya çalışın. Her tekrarda 5 saniye bekleyin.",
     sets: "3 Set x 10 Tekrar",
     time: 50,
+    details: [
+      "Sırtınızı ve omuzlarınızı dik tutun, karşıya bakın.",
+      "Başınızı öne veya arkaya eğmeden, çenenizi sanki bir çekmeceyi kapatır gibi arkaya doğru çekin.",
+      "Çift çene (double chin) görüntüsü elde etmelisiniz. En arkadaki noktada 5 saniye bekleyin.",
+      "Yavaşça serbest bırakın ve başlangıç pozisyonuna dönün."
+    ],
+    science: "Boyun omurlarını (cervical spine) stabilize eden derin boyun bükücü kasları (deep cervical flexors) izometrik olarak güçlendirir. Masa başında çalışırken gerilen suboksipital kasları uzatarak ileri kafa duruşunun (forward head posture) yarattığı mekanik stresi nötralize eder ve servikal disk üzerindeki yükü dengeler.",
     svg: `<svg viewBox="0 0 200 200" width="100%" height="100%">
-      <!-- Omurga ve Baş Profili -->
       <path d="M 60 170 L 60 120 Q 60 90 90 90" fill="none" stroke="var(--tx-secondary)" stroke-width="6" />
       <g class="chin-tucks-head">
         <circle cx="100" cy="70" r="30" fill="var(--bg-card-hover)" stroke="var(--pu)" stroke-width="4" />
         <path d="M 100 100 Q 115 100 115 90 L 120 70" fill="none" stroke="var(--pu)" stroke-width="4" />
-        <!-- Göz -->
         <circle cx="115" cy="65" r="2" fill="var(--cy)" />
       </g>
-      <!-- Sabit Kılavuz Çizgisi -->
       <line x1="125" y1="30" x2="125" y2="130" stroke="rgba(255, 255, 255, 0.05)" stroke-dasharray="4 4" />
     </svg>`
   },
@@ -213,13 +217,17 @@ const EXERCISES = [
     desc: "Sırtınızı, kalçanızı ve dirseklerinizi duvara tamamen yaslayın. Kollarınızı duvardan ayırmadan yavaşça yukarı kaldırıp aşağı indirin.",
     sets: "3 Set x 12 Tekrar",
     time: 60,
+    details: [
+      "Duvara yaslanın; topuklar, kalça, sırt ve baş duvara temas etmelidir.",
+      "Kollarınızı 90 derece bükerek dirseklerinizi ve ellerinizin arkasını duvara yaslayın (W pozisyonu).",
+      "Duvardan temasını kesmeden, kollarınızı yukarı doğru uzatıp düzleştirin (Y pozisyonu).",
+      "Yavaşça dirseklerinizi kaburgalarınıza doğru indirerek başlangıç pozisyonuna dönün. Kürek kemiklerinizi sıkıştırın."
+    ],
+    science: "Pektoral (göğüs) kasları esnetirken rhomboid ve alt trapezius kaslarını aktive eder. Torasik (üst sırt) mobilitesini artırarak masa başı çalışanlarda sıkça görülen torasik kifozu (kamburluğu) düzeltir ve omuz ekleminin subakromiyal alanını genişleterek sıkışma sendromunu önler.",
     svg: `<svg viewBox="0 0 200 200" width="100%" height="100%">
-      <!-- Duvar -->
       <line x1="80" y1="20" x2="80" y2="180" stroke="rgba(255, 255, 255, 0.1)" stroke-width="4" />
-      <!-- Gövde -->
       <line x1="84" y1="80" x2="84" y2="150" stroke="var(--tx-secondary)" stroke-width="6" />
       <circle cx="84" cy="60" r="12" fill="var(--bg-card-hover)" stroke="var(--pu)" stroke-width="4" />
-      <!-- Hareketli Kollar -->
       <g class="wall-angels-arms">
         <path d="M 84 80 Q 110 90 120 70 Q 130 50 110 30" fill="none" stroke="var(--cy)" stroke-width="4" />
       </g>
@@ -232,11 +240,16 @@ const EXERCISES = [
     desc: "Bir diziniz yerde olacak şekilde lunge pozisyonu alın. Kalçanızı öne doğru iterek arka bacağın ön kısmındaki (psoas) gerilmeyi hissedin. Omurganızı dik tutun.",
     sets: "Her Bacak İçin 30 Saniye Bekle",
     time: 30,
+    details: [
+      "Yerde lunge pozisyonu alın: Sağ diziniz 90 derece bükülü önde ayak yerde olsun, sol diziniz geride yerde olsun.",
+      "Omurganızı dik tutarak kalçanızı hafifçe öne ve aşağı doğru itin.",
+      "Sol bacağınızın ön-üst kısmındaki (kalça bükücü) gerilmeyi hissedin. Bu pozisyonda 30 saniye bekleyin.",
+      "Nefes vererek pozisyonu koruyun, ardından diğer bacağa geçin."
+    ],
+    science: "Saatlerce oturma pozisyonunda kalmak, kalça bükücü (psoas ve iliacus) kaslarının kronik olarak kısalmasına yol açar. Bu kısalık pelvik yapıyı öne doğru çekerek anterior pelvik tilt (ördek popo) duruşuna ve bel (lumbar) lordozunun artmasına, dolayısıyla bel ağrılarına neden olur. Bu germe egzersizi psoas kasının boyunu uzatarak pelvik halkayı nötr hizasına getirir.",
     svg: `<svg viewBox="0 0 200 200" width="100%" height="100%">
-      <!-- Yer -->
       <line x1="20" y1="160" x2="180" y2="160" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2" />
       <g class="lunge-stretch-body">
-        <!-- Gövde ve Bacaklar -->
         <circle cx="90" cy="60" r="12" fill="var(--bg-card-hover)" stroke="var(--pu)" stroke-width="4" />
         <path d="M 90 72 L 90 110 L 130 160 M 90 110 L 60 120 L 60 160" fill="none" stroke="var(--tx-secondary)" stroke-width="5" />
       </g>
@@ -249,11 +262,16 @@ const EXERCISES = [
     desc: "Sırt üstü uzanın, dizlerinizi bükün. Kalça kaslarınızı sıkarak kalçanızı yukarı kaldırın. Vücudunuz omuzlardan dizlere kadar düz bir çizgi oluşturmalıdır.",
     sets: "3 Set x 15 Tekrar",
     time: 45,
+    details: [
+      "Sırt üstü uzanın, dizlerinizi bükün ve ayak tabanlarınızı omuz genişliğinde yere basın.",
+      "Kollarınızı yanlarda yere bırakın. Topuklarınızdan güç alarak kalçanızı yerden kaldırın.",
+      "En üst noktada kalça kaslarınızı (gluteus maximus) maksimum derecede sıkın ve vücudunuz omuzdan dize düz bir hat olana kadar yükselin.",
+      "2 saniye bekleyin ve yavaşça kalçanızı yere indirin."
+    ],
+    science: "Oturarak geçirilen uzun saatler kalça kaslarında 'gluteal amnezi'ye (ölü kalça sendromu) yol açar. Kalça aktifleşmediğinde, vücut yükü bel ve hamstrig kaslarına yükler. Glute bridge egzersizi kalça kaslarını izole ederek aktive eder, pelvik stabilizasyonu artırır ve lumbar omurga üzerindeki mekanik baskıyı azaltarak alt sırtı korur.",
     svg: `<svg viewBox="0 0 200 200" width="100%" height="100%">
-      <!-- Yer -->
       <line x1="20" y1="150" x2="180" y2="150" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2" />
       <g class="glute-bridge-hips">
-        <!-- Yatan Gövde -->
         <path d="M 50 145 L 80 145 Q 120 120 150 145" fill="none" stroke="var(--tx-secondary)" stroke-width="5" />
         <circle cx="40" cy="140" r="10" fill="var(--bg-card-hover)" stroke="var(--pu)" stroke-width="4" />
       </g>
@@ -266,10 +284,16 @@ const EXERCISES = [
     desc: "Yüz üstü uzanın. Göğsünüzü ve ellerinizi yerden kaldırın. Kürek kemiklerinizi birbirine doğru sıkarak kollarınızla sırasıyla Y, T, W ve L harfleri oluşturun.",
     sets: "3 Set x 10 Tekrar (Her pozisyonda 3 sn bekle)",
     time: 30,
+    details: [
+      "Mat üzerine yüz üstü uzanın, alnınızı yere koyun.",
+      "Kollarınızı yanlara açarak kürek kemiklerinizi birbirine yaklaştırın ve göğsünüzü hafifçe yerden kaldırın.",
+      "Kollarınızı sırasıyla Y, T, W ve L harfleri çizecek şekilde konumlandırıp her pozisyonda kürek kemiklerinizi sıkarak 3 saniye tutun.",
+      "Başınızı aşırı arkaya bükmeyin, boynunuz omurganın devamı olarak düz kalsın."
+    ],
+    science: "Üst sırt ekstansör kaslarını (erector spinae) ve kürek kemiği stabilizatörlerini (trapezius ve rhomboids) güçlendirir. Yerçekiminin ve masa başı pozisyonunun omuzları öne çekmesini engelleyen bu egzersiz, omuz kuşağını geriye çekerek torasik omurgayı dikleştirir ve postüral dayanıklılığı artırır.",
     svg: `<svg viewBox="0 0 200 200" width="100%" height="100%">
       <line x1="20" y1="150" x2="180" y2="150" stroke="rgba(255, 255, 255, 0.1)" stroke-width="2" />
       <g class="prone-cobra-chest">
-        <!-- Yüzüstü Gövde -->
         <path d="M 50 148 L 130 140 L 160 148" fill="none" stroke="var(--tx-secondary)" stroke-width="5" />
         <circle cx="140" cy="125" r="10" fill="var(--bg-card-hover)" stroke="var(--pu)" stroke-width="4" />
       </g>
@@ -278,11 +302,66 @@ const EXERCISES = [
 ];
 
 const DOPAMIN_ITEMS = [
-  { id: "d_1", text: "Sosyal Medya Kaydırma", desc: "Instagram, TikTok vb. ucuz dopamin tetikleyicileri.", penalty: 15 },
-  { id: "d_2", text: "Şekerli Gıda & Fast Food", desc: "Basit şekerler ve insülin dalgalanmaları.", penalty: 10 },
-  { id: "d_3", text: "Çalışırken Müzik Dinleme", desc: "Zorlu Deep Work seanslarında pasif uyaranlar.", penalty: 5 },
-  { id: "d_4", text: "Porno & Mastürbasyon", desc: "Dopamin reseptörlerini tamamen körelten en büyük kaynak.", penalty: 30 },
-  { id: "d_5", text: "Lüzumsuz Oyun / Video İzleme", desc: "Çalışma saatleri arasında YouTube/Netflix döngüsü.", penalty: 15 }
+  { 
+    id: "d_1", 
+    text: "Sosyal Medya Kaydırma", 
+    desc: "Instagram, TikTok vb. ucuz dopamin tetikleyicileri.", 
+    penalty: 15,
+    details: [
+      "Çalışma saatlerinde telefonu fiziksel olarak başka bir odaya koyun veya kapatın.",
+      "Sosyal medya uygulamalarına günlük 15-20 dakika kullanım sınırı koyun.",
+      "Tüm anlık bildirimleri tamamen kapatın veya 'Rahatsız Etmeyin' moduna alın."
+    ],
+    science: "Sonsuz kaydırma (infinite scroll) algoritmaları, beynin ödül merkezine öngörülemez aralıklarla küçük dopamin paketleri gönderir (değişken oranlı ödüllendirme). Bu durum, beynin prefrontal korteksteki dikkat ağlarını bozarak odaklanma süresini kısaltır ve normal, çaba gerektiren işlerden alınan doyumu (dopamin baseline) düşürür."
+  },
+  { 
+    id: "d_2", 
+    text: "Şekerli Gıda & Fast Food", 
+    desc: "Basit şekerler ve insülin dalgalanmaları.", 
+    penalty: 10,
+    details: [
+      "Evdeki tüm abur cuburları, paketli şekerli gıdaları ve gazlı içecekleri tamamen uzaklaştırın.",
+      "Açlık krizlerinde kuru yemiş (ceviz, badem) veya bol su tüketin.",
+      "Alışverişe kesinlikle aç karnına çıkmayın, önceden planlı bir liste hazırlayın."
+    ],
+    science: "Rafine şekerler ve yüksek glisemik indeksli gıdalar, kan şekerini aniden yükseltip insülin patlamasına sebep olur. Bunu takip eden hızlı şeker düşüşü (hipoglisemi), beyne giden enerji akışını keserek beyin sisi (brain fog), konsantrasyon kaybı ve uyku haline yol açar."
+  },
+  { 
+    id: "d_3", 
+    text: "Çalışırken Müzik Dinleme", 
+    desc: "Zorlu Deep Work seanslarında pasif uyaranlar.", 
+    penalty: 5,
+    details: [
+      "Zorlu analitik veya kodlama işleri yaparken sözlü müzik dinlemeyin.",
+      "Eğer sessizlik rahatsuz ediyorsa, sadece enstrümantal, klasik müzik, brown noise veya lo-fi ritimler tercih edin.",
+      "Mümkünse tamamen sessiz bir ortamda çalışmayı alışkanlık haline getirin."
+    ],
+    science: "Sözlü müzik dinlemek, beynin dil işleme merkezlerini (Wernicke ve Broca alanları) meşgul eder. Yazılı veya mantıksal bir işle uğraşırken beyniniz iki dil girdisini aynı anda işlemeye çalışır, bu da bilişsel yükü (cognitive load) artırır ve çalışma belleğinin (working memory) kapasitesini azaltarak hata yapma payını yükseltir."
+  },
+  { 
+    id: "d_4", 
+    text: "Porno & Mastürbasyon", 
+    desc: "Dopamin reseptörlerini tamamen körelten en büyük kaynak.", 
+    penalty: 30,
+    details: [
+      "Tarayıcınızda yetişkin içerikli siteleri engelleyen filtreler kullanın.",
+      "Yalnız kaldığınızda ve sıkıldığınızda tetiklenmemek için kendinize fiziksel aktiviteler veya hobiler bulun.",
+      "Gece yatağa telefonla girmeyin."
+    ],
+    science: "Doğal olmayan, aşırı uyarılmış görsel girdiler ve yüksek hızlı dopamin salınımı, dopamin reseptörlerinin (D2 reseptörleri) downregulation (sayıca azalması) yaşamasına neden olur. Bu durum, beynin hayattaki normal başarılardan (kod yazmak, spor yapmak, öğrenmek) zevk alamamasına, motivasyon kaybına (anhedoni) ve genel bir iradesizliğe yol açar."
+  },
+  { 
+    id: "d_5", 
+    text: "Lüzumsuz Oyun / Video İzleme", 
+    desc: "Çalışma saatleri arasında YouTube/Netflix döngüsü.", 
+    penalty: 15,
+    details: [
+      "Çalışma bilgisayarınızdan oyunları tamamen silin.",
+      "YouTube veya Netflix gibi platformları sadece gün sonundaki dinlenme saatinde (19:00 - 21:00) açın.",
+      "Çalışırken tarayıcınızda eğlence sekmelerini tamamen kapatın."
+    ],
+    science: "Oyunlar ve hızlı kurgulu videolar, beyni sürekli uyarılmış (hyper-arousal) durumda tutar. Bu durum prefrontal korteksin mantıklı karar verme mekanizmasını devre dışı bırakarak dürtüsel (impulsive) davranışı tetikler ve çalışmaya geri dönmeyi imkansız hale getiren bir 'dopamin döngüsü' yaratır."
+  }
 ];
 
 const QUOTES = [
@@ -310,6 +389,7 @@ let S = {
 
 let expandedRoutines = [];
 let expandedLevers = [];
+let expandedDopaminItems = [];
 
 const $ = id => document.getElementById(id);
 function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
@@ -326,15 +406,36 @@ function loadState() {
   if (data) {
     try {
       S = JSON.parse(data);
-      if (S.totalXp === undefined) S.totalXp = 0;
-      if (S.circadianChecks === undefined) S.circadianChecks = [];
     } catch (e) {
       console.warn("State bozuk, sıfırlanıyor.");
       resetState(currentToday);
+      return;
     }
   } else {
     resetState(currentToday);
+    return;
   }
+
+  // Tüm kritik dizileri ve objeleri güvenli varsayılanlarla sarmala (eski localStorage sürüm göçleri için)
+  if (!S.date) S.date = currentToday;
+  if (!Array.isArray(S.completedTasks)) S.completedTasks = [];
+  if (!Array.isArray(S.dopaminViolations)) S.dopaminViolations = [];
+  if (!S.history || typeof S.history !== "object") S.history = {};
+  if (!Array.isArray(S.srsCards)) {
+    S.srsCards = [
+      { id: "s_1", cat: "İngilizce", front: "In the long run", answer: "Uzun vadede, eninde sonunda", ex: "We will win in the long run.", next: 0, interval: 0, rep: 0, ef: 2.5 },
+      { id: "s_2", cat: "AI / Prompting", front: "Few-Shot Prompting", answer: "Modelle örnekler (1-5 adet) vererek çıktıyı biçimlendirme tekniği.", ex: "Input: A -> Output: B yapısını prompt içinde göstermek.", next: 0, interval: 0, rep: 0, ef: 2.5 }
+    ];
+  }
+  if (!Array.isArray(S.projects)) {
+    S.projects = [
+      { id: "p_1", name: "AI Posture Analyzer App", type: "Mikro SaaS", desc: "Webcam üzerinden duruş kontrolü yapan mikro uygulama.", status: "dev" },
+      { id: "p_2", name: "CEFR Word Booster Deck", type: "Dijital Ürün", desc: "A1-B1 seviyeleri için kelime destesi.", status: "idea" }
+    ];
+  }
+  if (S.feynmanNotes === undefined) S.feynmanNotes = "";
+  if (S.totalXp === undefined) S.totalXp = 0;
+  if (!Array.isArray(S.circadianChecks)) S.circadianChecks = [];
 
   // Gün değiştiyse, bugünün verilerini sıfırla ama geçmişi kaydet
   if (S.date !== currentToday) {
@@ -572,7 +673,7 @@ function renderDashboard() {
           <div class="expand-indicator" style="font-size:0.75rem; color:var(--pu);">▲ Kapat</div>
         </div>
         
-        <div class="card-details-panel" style="margin-top:15px; width:100%; display:flex; flex-direction:column; gap:15px;">
+        <div class="card-details-panel" onclick="event.stopPropagation()" style="margin-top:15px; width:100%; display:flex; flex-direction:column; gap:15px;">
           <div class="details-section">
             <h4 style="font-family:var(--font-display); font-size:0.9rem; color:var(--tx-primary); margin-bottom:8px;">📋 Nasıl Yapılır? (Adım Adım Plan)</h4>
             <ul class="expanded-steps" style="list-style:none; display:flex; flex-direction:column; gap:8px; padding-left:0;">
@@ -696,23 +797,69 @@ function renderDeepWork() {
 
   DOPAMIN_ITEMS.forEach(d => {
     const isViolated = S.dopaminViolations.includes(d.id);
+    const isExpanded = expandedDopaminItems.includes(d.id);
     const div = document.createElement("div");
-    div.className = `dop-item ${isViolated ? "violated" : ""}`;
+    div.className = `dop-item ${isViolated ? "violated" : ""} ${isExpanded ? "expanded" : ""}`;
+    div.onclick = () => toggleDopaminExpand(d.id);
     
-    div.innerHTML = `
-      <div class="text-side">
-        <strong>${esc(d.text)}</strong>
-        <span class="sub">${esc(d.desc)} (Ceza: -${d.penalty} verimlilik)</span>
-      </div>
-      <div class="btn-group">
-        ${isViolated 
-          ? `<button class="btn green small" onclick="toggleDopamin('${d.id}')">Düzeltildi</button>`
-          : `<button class="btn red small" onclick="toggleDopamin('${d.id}')">Çiğnedim</button>`
-        }
-      </div>
-    `;
+    if (isExpanded) {
+      const stepsHtml = d.details.map(step => `<li><span class="bullet">🚫</span> <span class="step-text">${esc(step)}</span></li>`).join("");
+      
+      div.innerHTML = `
+        <div class="card-header-panel" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+          <div class="text-side">
+            <strong>${esc(d.text)}</strong>
+            <span class="sub" style="color:var(--rd)">Ceza: -${d.penalty} verimlilik</span>
+          </div>
+          <div class="expand-indicator" style="font-size:0.75rem; color:var(--pu);">▲ Kapat</div>
+        </div>
+        
+        <div class="card-details-panel" onclick="event.stopPropagation()" style="margin-top:15px; width:100%; display:flex; flex-direction:column; gap:15px;">
+          <div class="details-section">
+            <h4 style="font-family:var(--font-display); font-size:0.9rem; color:var(--tx-primary); margin-bottom:8px;">📋 Kaçınma Stratejisi (Adım Adım Plan)</h4>
+            <ul class="expanded-steps" style="list-style:none; display:flex; flex-direction:column; gap:8px; padding-left:0;">
+              ${stepsHtml}
+            </ul>
+          </div>
+          
+          <div class="details-section science-box" style="margin-bottom:10px;">
+            <h4 style="font-family:var(--font-display); font-size:0.9rem; color:var(--tx-primary); margin-bottom:8px;">🔬 Nörobiyolojik Etkisi (Biyolojik Süreç)</h4>
+            <p class="expanded-science" style="font-size:0.88rem; color:var(--tx-secondary); line-height:1.5; margin:0;">${esc(d.science)}</p>
+          </div>
+          
+          <div class="details-action-row" style="display:flex; justify-content:space-between; align-items:center;">
+            <button class="btn ${isViolated ? 'green' : 'red'} small" onclick="event.stopPropagation(); toggleDopamin('${d.id}')">
+              ${isViolated ? 'Düzeltildi' : 'Çiğnedim'}
+            </button>
+          </div>
+        </div>
+      `;
+    } else {
+      div.innerHTML = `
+        <div class="text-side">
+          <strong>${esc(d.text)}</strong>
+          <span class="sub">${esc(d.desc)} (Ceza: -${d.penalty} verimlilik)</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div class="expand-indicator" style="font-size:0.75rem; color:var(--tx-muted)">▼ Detay</div>
+          <button class="btn ${isViolated ? 'green' : 'red'} small" onclick="event.stopPropagation(); toggleDopamin('${d.id}')">
+            ${isViolated ? 'Düzeltildi' : 'Çiğnedim'}
+          </button>
+        </div>
+      `;
+    }
     dList.appendChild(div);
   });
+}
+
+function toggleDopaminExpand(id) {
+  const idx = expandedDopaminItems.indexOf(id);
+  if (idx >= 0) {
+    expandedDopaminItems.splice(idx, 1);
+  } else {
+    expandedDopaminItems.push(id);
+  }
+  renderDeepWork();
 }
 
 function toggleDopamin(id) {
@@ -1032,6 +1179,19 @@ function renderPosture() {
   $("postureDesc").textContent = activeEx.desc;
   $("postureSets").textContent = activeEx.sets;
   $("postureSvgContainer").innerHTML = activeEx.svg;
+
+  // Adım adım rehber ve bilimsel açıklamayı doldur
+  const detailsList = $("postureDetailsList");
+  const scienceText = $("postureScienceText");
+  
+  if (detailsList && scienceText) {
+    if (activeEx.details && activeEx.details.length > 0) {
+      detailsList.innerHTML = activeEx.details.map(step => `<li><span class="bullet">💪</span> <span class="step-text">${esc(step)}</span></li>`).join("");
+    } else {
+      detailsList.innerHTML = `<li><span class="bullet">💪</span> <span class="step-text">${esc(activeEx.desc)}</span></li>`;
+    }
+    scienceText.textContent = activeEx.science || "Bu egzersiz için bilimsel gerekçe yükleniyor...";
+  }
 }
 
 function selectExercise(idx) {
@@ -1445,7 +1605,7 @@ function renderCircadianLevers() {
           <div class="expand-indicator" style="font-size:0.75rem; color:var(--pu);">▲ Kapat</div>
         </div>
         
-        <div class="card-details-panel" style="margin-top:15px; width:100%; display:flex; flex-direction:column; gap:15px;">
+        <div class="card-details-panel" onclick="event.stopPropagation()" style="margin-top:15px; width:100%; display:flex; flex-direction:column; gap:15px;">
           <div class="details-section">
             <h4 style="font-family:var(--font-display); font-size:0.9rem; color:var(--tx-primary); margin-bottom:8px;">📋 Nasıl Yapılır? (Adım Adım Plan)</h4>
             <ul class="expanded-steps" style="list-style:none; display:flex; flex-direction:column; gap:8px; padding-left:0;">
