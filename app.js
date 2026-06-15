@@ -12,13 +12,13 @@ const DAILY_ROUTINE = [
     type: "sleep", 
     xp: 10,
     details: [
-      "Yataktan kalkar kalkmaz 1-2 dakika hafifçe esne.",
-      "Balkona, bahçeye veya pencere önüne geçip gökyüzüne bak.",
-      "Gözüne direkt ışık gelsin ama güneşe doğrudan bakıp gözünü yakma.",
-      "Camın arkasından değil, açık havada en az 10 dakika kal (bulutlu havada 15-20 dk).",
-      "Yarım litre oda sıcaklığında su iç."
+      "Uyanır uyanmaz ilk 5 dakika içinde yataktan kalk ve hafifçe gerinerek vücudunu ısıt.",
+      "Camın arkasından değil (cam sirkadiyen saati kuran yararlı dalga boylarını %50'den fazla filtreler), doğrudan açık havaya çık (balkon, bahçe veya pencereyi tam aç).",
+      "Güneş ışınlarının doğrudan gözüne girmesini sağla (güneşe direkt bakıp retinanı yakma, sadece gökyüzüne bak).",
+      "Açık ve güneşli havalarda 10 dakika, bulutlu havalarda 20 dakika, yağmurlu/karanlık havalarda ise 30 dakika dışarıda kal.",
+      "Hücrelerin gece boyu kaybettiği suyu geri kazanmak için 500 ml oda sıcaklığında mineralli su (içine bir çimdik kaya tuzu atılmış) iç."
     ],
-    science: "Gözündeki özel hücreler sabah gün ışığını algılayınca beyne 'sabah oldu' sinyali gönderir. Beyin hemen uykuyu dağıtan 'Kortizol' hormonunu salgılar. Aynı zamanda, yaklaşık 16 saat sonra salgılanacak olan uyku hormonu 'Melatonin' için geri sayım sayacını başlatır. Yani kaliteli bir gece uykusu sabah başlar!"
+    science: "Gözlerimizin arkasında bulunan melanopsin hücreleri, sabahın yüksek yoğunluklu mavi/sarı ışık dalgalarını algılar ve doğrudan beyndeki ana saat olan 'Suprakiazmatik Çekirdek' (SCN) bölgesini uyarır. Bu uyarı ile vücutta stres ve uyanıklık hormonu olan 'Kortizol' pik yapar. Kortizol piki, uykunu açar ve tam 16 saat sonrası için beynin 'Melatonin' (uyku hormonu) salgılama sayacını kurar. Yani bu sabah rutini, bu gece ne kadar derin ve kaliteli uyuyacağını belirleyen biyolojik anahtardır!"
   },
   { 
     id: "r_2", 
@@ -28,12 +28,12 @@ const DAILY_ROUTINE = [
     type: "deepwork", 
     xp: 30,
     details: [
-      "Telefonunu başka bir odaya koy veya tamamen sessize al.",
-      "Çalışacağın konuyu veya kod bloğunu önceden belirle.",
-      "90 dakika boyunca tarayıcında sadece çalışacağın sekmeleri açık tut.",
-      "Dikkatini dağıtacak hiçbir bildirime bakma."
+      "Telefonunu tamamen kapat veya uçak moduna alıp başka bir odaya yerleştir. Göz önünde olması bile dikkatini böler.",
+      "Çalışmaya başlamadan önce, bu 90 dakikada tam olarak hangi modülü kodlayacağını veya hangi konuyu yazacağını kağıda net olarak yaz.",
+      "Bilgisayarında sadece çalışacağın sekmeleri açık tut; tüm sosyal medya, e-posta ve iletişim sekmelerini kapat.",
+      "90 dakika boyunca masandan kalkma ve su dışında hiçbir şeyle ilgilenme (Pomodoro gibi kısa kesme, 90 dakika zihnin derinleşmesi için ideal süredir)."
     ],
-    science: "Cal Newport'un 'Pürüzsüz Odaklanma' teorisine göre, dikkatini her dağıttığında (örneğin telefona 2 saniye bakmak) beynin eski odağına geri dönmesi tam 20 dakika sürer. Kesintisiz 90 dakika çalışarak 'Akış' (Flow) durumuna geçersin ve normalde 5 saatte yapacağın işi bitirirsin."
+    science: "Cal Newport'un 'Deep Work' (Pürüzsüz Odaklanma) teorisine göre, dikkatini her dağıttığında (örneğin sadece 2 saniyeliğine telefona gelen bir bildirime bakmak) beyninde 'Dikkat Kalıntısı' (Attention Residue) oluşur. Beyninin eski derin odağına geri dönmesi tam 20-25 dakika sürer. Kesintisiz 90 dakikalık 'Ultradyan Döngü' boyunca çalışarak, beynin en üretken olduğu ve zor problemleri çözebildiği 'Akış' (Flow) fazına geçersin. Bu fazda ürettiğin işin kalitesi, bölünerek yapılan 5 saatlik çalışmadan çok daha yüksektir."
   },
   { 
     id: "r_3", 
@@ -43,12 +43,12 @@ const DAILY_ROUTINE = [
     type: "posture", 
     xp: 20,
     details: [
-      "Boyun hizalaması için 10 set Chin Tuck egzersizi yap.",
-      "Kamburluğu önlemek için duvara yaslanıp 12 set Wall Angel yap.",
-      "Masa başı kısalan kalça kaslarını (psoas) germek için Lunge Stretch yap.",
-      "Her egzersizde kaslarındaki yanmayı ve gerilmeyi hisset."
+      "Boyun hizalaması için 10 set Chin Tuck egzersizi yap (çeneyi geriye çekip boynu dikleştirerek).",
+      "Kamburluğu önlemek ve omuzları açmak için duvara yaslanıp 12 tekrar Wall Angel yap.",
+      "Masa başında kısalan kalça kaslarını (psoas) germek için diz çökerek Hip Flexor Stretch yap (her bacak için 30 sn).",
+      "Her hareketi acele etmeden, kaslarındaki gerilmeyi hissederek ve derin nefes alarak tamamla."
     ],
-    science: "Saatlerce ekrana bakmak boyun kaslarını uzatır, göğüs kaslarını kısaltır. Bu durum 'İleri Kafa Duruşu' ve kamburluğa yol açar. Düzeltici egzersizler, bu zayıf kasları uyararak omurgayı doğal hizasına çeker, akciğer kapasiteni ve beyne giden kan akışını artırır."
+    science: "Saatlerce bilgisayar başında oturmak, göğüs kaslarını (pectoralis) ve kalça bükücü kasları (psoas) kısaltırken; üst sırt kaslarını (rhomboids) ve boyun stabilizatörlerini (deep cervical flexors) zayıflatır. Bu durum 'İleri Kafa Duruşu' (Forward Head Posture) ve kamburluğa (Kyphosis) neden olur. Bu 30 dakikalık kinesiyolojik egzersizler kısaltılmış kasları gerip zayıflamış kasları uyararak omurgayı doğal anatomik hizasına çeker, akciğer kapasiteni %30 artırır ve beyne giden oksijen miktarını maksimize eder."
   },
   { 
     id: "r_4", 
@@ -58,11 +58,12 @@ const DAILY_ROUTINE = [
     type: "other", 
     xp: 10,
     details: [
-      "Yumurta, avokado gibi sağlıklı yağ ve protein içeren düşük karbonhidratlı beslen.",
-      "Günlük en kritik 3 hedefini (Kanban) belirle.",
-      "Gereksiz şekerli gıdalardan uzak dur."
+      "Sabah kahvaltısında insülin patlaması yaratacak şekerli gıdalar, ekmek, poğaça veya meyve sularını tamamen hayatından çıkar.",
+      "Yumurta, avokado, zeytin, ceviz gibi sağlıklı yağlar ve kaliteli proteinler içeren düşük karbonhidratlı (Ketojenik/Low-Carb) bir menü seç.",
+      "Yemek yerken gün içinde tamamlaman gereken en kritik 3 ana projeyi (Kanban) gözden geçir ve öncelik sıralamasını netleştir.",
+      "Yemekten hemen sonra günlük hedeflerini gözden geçirip zihnini güne hazırla."
     ],
-    science: "Sabah yediğin şeker ve basit karbonhidratlar kan şekerini hızla yükseltip ardından aniden düşürür. Bu durum 'beyin sisi'ne ve öğlen uykusunun gelmesine neden olur. Protein ve sağlıklı yağlar ise beynine saatlerce stabil ve temiz enerji sağlar."
+    science: "Sabahları yüksek karbonhidrat ve şeker tüketmek, kan şekerini hızla yükseltir ve buna bağlı olarak pankreastan yüksek miktarda insülin salgılanır. Kısa süre sonra kan şekeri aniden düşer (hipoglisemi) ve bu durum zihinsel bulanıklığa, uyku haline ve 'beyin sisi'ne yol açar. Sağlıklı yağlar ve proteinler ise keton cisimcikleri ve yavaş salınımlı enerji üreterek beynin 'Prefrontal Korteks' (karar verme ve odaklanma merkezi) bölgesine saatlerce stabil, temiz ve kesintisiz enerji sağlar."
   },
   { 
     id: "r_5", 
@@ -72,11 +73,12 @@ const DAILY_ROUTINE = [
     type: "learning", 
     xp: 30,
     details: [
-      "AI modellerini (Gemini, Claude vb.) kullanarak pratik yap.",
-      "Yeni prompt tekniklerini test et.",
-      "Geliştirdiğin projeleri AI API'leri ile entegre et."
+      "AI modellerini (Gemini, Claude vb.) kullanarak pratik yapacağın ana konuyu belirle.",
+      "Gelişmiş prompt tekniklerini (Chain-of-Thought, System Instructions, Few-Shot) gerçek projelerde dene.",
+      "Yapay zeka araçlarının API entegrasyonlarını yerelde kodlayarak pasif gelir projelerine dahil et.",
+      "AI'ın ürettiği kodları ve mantığı detaylıca analiz ederek kendi yazılım yeteneklerini geliştir."
     ],
-    science: "Yapay zeka araçlarını kullanmak zihinsel bir çarpan etkisi yaratır. Ancak bu araçları verimli kullanabilmek için net, yapılandırılmış yönergeler (prompting) tasarlamak gerekir. Bu seans, geleceğin teknoloji dünyasında iş yapma yeteneğini 10 katına çıkarır."
+    science: "Prompt Mühendisliği, sadece yapay zekayla konuşmak değil, karmaşık mantık modellerini ve algoritmik düşünceyi dil yoluyla kodlama sanatıdır. AI araçlarını bir zihinsel kaldıraç olarak kullanmak, bilişsel hızını 10 katına çıkarır. Bu seans, geleceğin teknoloji dünyasında iş yapma yeteneğini ve pasif gelir projelerinin geliştirilme hızını üst seviyeye ulaştırır."
   },
   { 
     id: "r_6", 
@@ -86,11 +88,12 @@ const DAILY_ROUTINE = [
     type: "learning", 
     xp: 30,
     details: [
-      "Yeni kelimeleri SM-2 kart sistemine ekle.",
-      "Daha önce öğrendiğin kelimeleri test et.",
-      "Kelimeleri sesli telaffuz ederek 'Feynman Tekniği' ile cümle içinde kullan."
+      "Yeni kelimeleri ve kalıpları SM-2 spaced repetition (aralıklı tekrar) destene ekle.",
+      "Destendeki günü gelmiş (due) kartları Hızlı Test Modu kullanarak tekrar et.",
+      "Yeni öğrendiğin kelimeleri sadece ezberleme; onları sesli telaffuz ederek 'Feynman Tekniği' ile kendi cümlelerin içinde kullan.",
+      "İngilizce podcast veya makaleleri dinleyip okuyarak kelimelerin doğal kullanımlarına maruz kal."
     ],
-    science: "Spaced Repetition (Aralıklı Tekrar) hafızadaki 'unutma eğrisi'ni kırar. Bilgiyi tam unutmak üzereyken tekrar etmek, o bilginin beynindeki nöronlar arasında kalıcı yollar oluşturmasını sağlar ve geçici hafızadan kalıcı hafızaya taşır."
+    science: "Spaced Repetition (Aralıklı Tekrar) metodu, beynin doğal 'Unutma Eğrisi' (Forgetting Curve) grafiğini kırmak için tasarlanmış en etkili bilimsel yöntemdir. Bir bilgiyi tam unutmak üzereyken (sinapslar zayıflarken) tekrar calls, beyne 'bu bilgi hayati önem taşıyor' sinyali gönderir. Bu sinyal nöronlar arasındaki miyelin kılıfını kalınlaştırarak bilginin geçici bellekten (hipokampus) kalıcı uzun vadeli belleğe (neokorteks) transfer edilmesini sağlar."
   },
   { 
     id: "r_7", 
@@ -100,11 +103,12 @@ const DAILY_ROUTINE = [
     type: "posture", 
     xp: 20,
     details: [
-      "Vücudunu ısıtmak için 5 dakika hafif kardiyo yap.",
-      "Bileşik egzersizler (Squat, şınav vb.) ile kaslarını uyar.",
-      "Nabzını yükseltmek için kısa süreli HIIT setleri ekle."
+      "5 dakika hafif tempo hareketlerle (jumping jack, diz çekme vb.) vücut ısısını yükselt ve eklemlerini yağla.",
+      "Bileşik (compound) vücut ağırlığı hareketleri (Şınav, Squat, Pull-up veya Plank) ile kas gruplarını uyar.",
+      "Nabzını maksimum seviyeye çıkarıp yağ yakımını ve kondisyonu artırmak için 3-4 set kısa süreli HIIT (yüksek yoğunluklu interval) ekle.",
+      "Antrenman sonunda kas boyunu uzatmak ve laktik asidi dağıtmak için 5 dakika statik esneme yap."
     ],
-    science: "Günün bu saatinde vücut sıcaklığın ve kas koordinasyonun zirvededir. Yapacağın antrenman büyüme hormonu ve testosteron salınımını tetikler, kas tonusunu korur ve zihinsel yorgunluğu sıfırlayarak günün ikinci yarısı için enerji pompalar."
+    science: "Günün bu saatinde (12:00 - 13:00) vücut sıcaklığın, akciğer kapasiten ve kas koordinasyonun biyolojik olarak zirve noktasındadır. Bu saatte yapılan yoğun fiziksel aktivite, büyüme hormonu (GH) ve testosteron salgılamasını tetikler. Ayrıca beynde 'Endorfin' ve 'BDNF' (Beyin Türevli Nörotrofik Faktör) salgılatarak yeni nöronların oluşumunu destekler ve zihinsel yorgunluğu sıfırlayarak günün geri kalanı için taze enerji pompalar."
   },
   { 
     id: "r_8", 
@@ -114,11 +118,11 @@ const DAILY_ROUTINE = [
     type: "other", 
     xp: 10,
     details: [
-      "Öğle yemeğini acele etmeden, çiğneyerek ye.",
-      "Yemekten sonra 10-15 dakika hafif tempoda yürüyüş yap.",
-      "Ekrana veya telefona bakmadan zihnini dinlendir."
+      "Öğle yemeğini ekranlardan uzak (telefon, televizyon kapalı), sadece yemeğin tadına, kokusuna odaklanarak ve yavaşça çiğneyerek ye.",
+      "Yemek bittikten hemen sonra dışarı çıkıp 10-15 dakika hafif/orta tempoda yürüyüş yap.",
+      "Yürüyüş esnasında zihnini serbest bırak, herhangi bir işle ilgili düşünmemeye çalış. Enstrümantal veya hafif müzikler dinleyebilirsin."
     ],
-    science: "Yemek sonrası yürüyüş, sindirimi hızlandırır ve kasların glikozu emmesini sağlayarak kan şekeri dalgalanmalarını (yemek sonrası gelen ağırlığı) önler. Ayrıca ekransız dinlenme, beynin varsayılan modunu (Default Mode Network) aktif ederek yaratıcı fikirler üretmesini sağlar."
+    science: "Yemekten sonra yapılan hafif yürüyüş, 'Glikoz Klirensi' adı verilen süreci başlatır; yani kan şekerinin hızla kaslar tarafından emilmesini sağlayarak insülin dalgalanmalarını ve yemek sonrası gelen o ağır uyku çömesini (postprandial somnolence) önler. Ayrıca ekransız dinlenme, beynin 'Varsayılan Mod Ağı'nı (Default Mode Network) aktif ederek sabah öğrenilen bilgilerin arka planda organize edilmesini ve yaratıcı fikirlerin filizlenmesini sağlar."
   },
   { 
     id: "r_9", 
@@ -128,11 +132,12 @@ const DAILY_ROUTINE = [
     type: "other", 
     xp: 15,
     details: [
-      "E-postaları cevapla, mesajları kontrol et.",
-      "Sosyal etkileşimlerini planla.",
-      "Ucuz dopamin kaynaklarından (sosyal medya kaydırma) uzak dur."
+      "E-postaları cevapla, mesajları kontrol et ve sosyal medya etkileşimlerini bu saat aralığında tamamla.",
+      "Günün geri kalanındaki işleri organize et, fatura ödemeleri veya basit idari işleri aradan çıkar.",
+      "Ucuz dopamin tuzaklarından (sonsuz kaydırma) uzak durmak için sosyal medya uygulamalarına süre sınırı koy.",
+      "Zihinsel olarak yorucu olmayan ama yapılması gereken mekanik işleri bu saate yığ."
     ],
-    science: "Öğleden sonra zihinsel enerji sabah saatlerine göre daha düşüktür. Bu yüzden yüksek odak gerektirmeyen, rutin ve iletişim odaklı işleri bu saate planlamak zihinsel enerjiyi verimli kullanmayı sağlar. Bu saatte dopamin reseptörlerini korumak akşam motivasyonunu yüksek tutar."
+    science: "Öğleden sonra (14:00 - 17:30) biyolojik olarak zihinsel enerjinin ve odaklanma kapasitesinin en düşük olduğu dilimdir. Bu saatlerde yüksek odak gerektiren ağır işler yapmaya çalışmak zihinsel tükenmişliğe yol açar. Bu yüzden derin odaklanma gerektirmeyen hafif işleri, e-postaları ve iletişim işlerini bu saate planlamak bilişsel enerjiyi en yüksek verimle kullanmanı sağlar."
   },
   { 
     id: "r_10", 
@@ -142,10 +147,11 @@ const DAILY_ROUTINE = [
     type: "sleep", 
     xp: 10,
     details: [
-      "Akşamüstü güneş batarken dışarı çıkıp 10-15 dakika gökyüzüne bak.",
-      "Gözlerine akşam ışığının sarı/turuncu tonlarının girmesine izin ver."
+      "Akşamüstü güneş ufuk çizgisine yakınken (gün batımı saatinde) dışarı çık ve 10-15 dakika gökyüzüne bak.",
+      "Güneş gözlüğü veya normal gözlük takmamaya çalış (kontakt lensler veya numaralı gözlükler ışık spektrumunu bozmazsa sorun olmaz).",
+      "Gözlerine akşamın düşük açılı, kırmızı ve turuncu dalga boylarındaki ışınlarının girmesine izin ver."
     ],
-    science: "Gün batımı ışığının sarı ve turuncu dalga boyları, gözdeki hücreler üzerinden beyne 'gün bitiyor' mesajı gönderir. Bu sinyal, beyni geceleri melatonin (uyku hormonu) üretmeye hazırlar ve mavi ışığın vereceği zararlara karşı gözü koruyucu bir kalkan gibi sarar."
+    science: "Gün batımı ışığı, mavi ışık oranı düşük, kırmızı ve turuncu dalga boyları yüksek olan özel bir spektruma sahiptir. Gözdeki retina ganglion hücreleri bu spektrumu algıladığında beyndeki sirkadiyen merkeze (SCN) 'gün bitiyor' mesajı gönderir. Bu sinyal, beynin çam kozalağı bezinde (pineal gland) melatonin sentezini başlatır ve göz hücrelerini geceleri maruz kalacağın yapay mavi ışığın (ekranlar, ampuller) vereceği zararlara karşı biyolojik olarak koruma altına alır."
   },
   { 
     id: "r_11", 
@@ -155,9 +161,10 @@ const DAILY_ROUTINE = [
     type: "other", 
     xp: 10,
     details: [
-      "Tüm teknolojik cihazları ve parlak ekranları bir kenara bırak.",
-      "Loş bir ışıkta kitap oku veya sohbet et.",
-      "Zihnini günün stresinden arındır."
+      "Saat 19:00 itibarıyla işle ilgili tüm bilgisayarları kapat ve işle alakalı düşünceleri zihninden uzaklaştır.",
+      "Telefonunu gözünün önünden kaldır, bildirim seslerini kapat.",
+      "Loş ve sarı bir ışık eşliğinde (tavan ışığı yerine masa lambası) kitap oku, meditasyon yap veya ailenle sohbet et.",
+      "Ekransız geçirilen bu sürede zihninin yavaşlamasına izin ver."
     ],
     science: "Geceleri ekrana bakmak, beyne hala öğle vakti olduğunu düşündürür. Ekransız kalarak beynin dalgalarını yavaşlatır, Alfa ve Teta dalgalarına geçişi kolaylaştırırsın. Bu da uykuya geçiş süresini kısaltır ve derin uykuyu uzatır."
   },
@@ -169,11 +176,12 @@ const DAILY_ROUTINE = [
     type: "sleep", 
     xp: 15,
     details: [
-      "Odadaki tüm parlak tavan ışıklarını kapat, loş zemin aydınlatmalarına geç.",
-      "Yatak odasını havalandır ve sıcaklığı 18-19 dereceye ayarla.",
-      "Uyumadan önceki son 1 saatte hiçbir ekrana bakma."
+      "Odadaki tüm beyaz ve parlak tavan ışıklarını kapat. Sadece göz hizasının altında kalan loş zemin aydınlatmalarına geç.",
+      "Yatak odasını uykudan önce iyice havalandır ve oda sıcaklığının 18-19 derece arasında olmasını sağla.",
+      "Uyumadan önceki son 1 saat içinde kesinlikle telefon, tablet veya televizyon ekranına bakma.",
+      "Yatağa sadece uykun geldiğinde gir, yatakta telefonla vakit geçirme."
     ],
-    science: "Matthew Walker'a göre kaliteli uyku için iki anahtar vardır: Karanlık ve Serinlik. Parlak ışık melatonini bıçak gibi keser. Vücudun uykuya dalabilmesi için çekirdek sıcaklığının 1 derece düşmesi gerekir, bu yüzden serin bir oda uyku derinliğini 2 kat artırır."
+    science: "Matthew Walker'ın bilimsel araştırmalarına göre, kaliteli uykunun iki temel tetikleyicisi Karanlık ve Serinliktir. Mavi ve parlak ışıklar uyku hormonu melatonini anında baskılar ve uyku kaliteni %50 düşürür. Vücudun uykuya dalabilmesi için çekirdek vücut sıcaklığının yaklaşık 1 santigrat derece düşmesi gerekir. Serin bir oda (18.3°C) bu düşüşü hızlandırarak derin uyku (NREM) evresini uzatır ve sabah dinç uyanmanı garanti eder."
   }
 ];
 
@@ -299,6 +307,9 @@ let S = {
   totalXp: 0,
   circadianChecks: []
 };
+
+let expandedRoutines = [];
+let expandedLevers = [];
 
 const $ = id => document.getElementById(id);
 function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
@@ -537,22 +548,64 @@ function renderDashboard() {
 
     const isActive = totalMinutesNow >= startMins && totalMinutesNow < endMins;
     const isDone = S.completedTasks.includes(r.id);
+    const isExpanded = expandedRoutines.includes(r.id);
 
     const div = document.createElement("div");
-    div.className = `time-item ${isActive ? "active" : ""} ${isDone ? "done" : ""}`;
-    div.onclick = () => toggleTask(r.id);
-    
-    div.innerHTML = `
-      <div class="hour">${r.time}</div>
-      <div class="desc-col">
-        <strong>${esc(r.title)}</strong>
-        <p class="sub" style="margin-top: 2px">${esc(r.desc)}</p>
-      </div>
-      <div style="display:flex; align-items:center; gap:12px;">
-        <button class="info-btn" onclick="event.stopPropagation(); showScienceSheet('${r.id}', false)" title="Bilimsel Açıklama ve Detaylı Plan">ℹ️</button>
-        <div class="chk-box">${isDone ? "✔" : ""}</div>
-      </div>
-    `;
+    div.className = `time-item ${isActive ? "active" : ""} ${isDone ? "done" : ""} ${isExpanded ? "expanded" : ""}`;
+    div.onclick = () => toggleRoutineExpand(r.id);
+
+    if (isExpanded) {
+      let stepsHtml = "";
+      if (r.details && r.details.length > 0) {
+        stepsHtml = r.details.map(step => `<li><span class="bullet">⚡</span> <span class="step-text">${esc(step)}</span></li>`).join("");
+      } else {
+        stepsHtml = `<li><span class="bullet">⚡</span> <span class="step-text">${esc(r.desc)}</span></li>`;
+      }
+
+      div.innerHTML = `
+        <div class="card-header-panel" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="hour" style="font-family:var(--font-mono); font-weight:700; color:var(--pu);">${r.time}</div>
+            <strong>${esc(r.title)}</strong>
+            <span class="sheet-type-badge ${r.type}" style="font-size:0.6rem; padding:2px 8px;">${r.type.toUpperCase()}</span>
+          </div>
+          <div class="expand-indicator" style="font-size:0.75rem; color:var(--pu);">▲ Kapat</div>
+        </div>
+        
+        <div class="card-details-panel" style="margin-top:15px; width:100%; display:flex; flex-direction:column; gap:15px;">
+          <div class="details-section">
+            <h4 style="font-family:var(--font-display); font-size:0.9rem; color:var(--tx-primary); margin-bottom:8px;">📋 Nasıl Yapılır? (Adım Adım Plan)</h4>
+            <ul class="expanded-steps" style="list-style:none; display:flex; flex-direction:column; gap:8px; padding-left:0;">
+              ${stepsHtml}
+            </ul>
+          </div>
+          
+          <div class="details-section science-box" style="margin-bottom:10px;">
+            <h4 style="font-family:var(--font-display); font-size:0.9rem; color:var(--tx-primary); margin-bottom:8px;">🔬 Bilimsel Gerekçesi (Biyolojik Süreç)</h4>
+            <p class="expanded-science" style="font-size:0.88rem; color:var(--tx-secondary); line-height:1.5; margin:0;">${esc(r.science)}</p>
+          </div>
+          
+          <div class="details-action-row" style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="xp-badge" style="font-family:var(--font-mono); font-size:0.8rem; color:var(--cy); font-weight:700;">💰 Ödül: +${r.xp} XP</div>
+            <button class="complete-action-btn ${isDone ? 'done' : ''}" onclick="event.stopPropagation(); toggleTask('${r.id}')">
+              ${isDone ? '↺ Tamamlamayı Geri Al' : '✔ Yapıldı Olarak İşaretle'}
+            </button>
+          </div>
+        </div>
+      `;
+    } else {
+      div.innerHTML = `
+        <div class="hour">${r.time}</div>
+        <div class="desc-col">
+          <strong>${esc(r.title)}</strong>
+          <p class="sub" style="margin-top: 2px">${esc(r.desc)}</p>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div class="expand-indicator" style="font-size:0.75rem; color:var(--tx-muted)">▼ Detay</div>
+          <div class="chk-box">${isDone ? "✔" : ""}</div>
+        </div>
+      `;
+    }
     list.appendChild(div);
   });
 
@@ -1094,55 +1147,24 @@ function hideNewProjectModal() {
   $("projectModal").style.display = "none";
 }
 
-function showScienceSheet(itemId, isLever) {
-  const item = isLever 
-    ? CIRCADIAN_LEVERS.find(l => l.id === itemId)
-    : DAILY_ROUTINE.find(r => r.id === itemId);
-
-  if (!item) return;
-
-  $("sheetTitle").textContent = item.title;
-  $("sheetTime").textContent = item.time;
-  
-  const badge = $("sheetBadge");
-  if (badge) {
-    if (isLever) {
-      badge.textContent = "SİRKADİYEN KALDIRAÇ";
-      badge.className = `sheet-type-badge ${item.badge || 'other'}`;
-    } else {
-      badge.textContent = item.type.toUpperCase();
-      badge.className = `sheet-type-badge ${item.type}`;
-    }
-  }
-
-  // Render step-by-step details
-  const detailsList = $("sheetDetailsList");
-  detailsList.innerHTML = "";
-  if (item.details && item.details.length > 0) {
-    item.details.forEach(step => {
-      const li = document.createElement("li");
-      li.innerHTML = `<span class="bullet">⚡</span> <span class="step-text">${esc(step)}</span>`;
-      detailsList.appendChild(li);
-    });
+function toggleRoutineExpand(id) {
+  const idx = expandedRoutines.indexOf(id);
+  if (idx >= 0) {
+    expandedRoutines.splice(idx, 1);
   } else {
-    detailsList.innerHTML = `<li><span class="bullet">⚡</span> <span class="step-text">${esc(item.desc)}</span></li>`;
+    expandedRoutines.push(id);
   }
-
-  // Render scientific explanation
-  $("sheetScienceText").textContent = item.science || "Bu aktivite sirkadiyen ritmini ve bilişsel odağını optimize etmek için bilimsel olarak tasarlanmıştır.";
-
-  const sheet = $("scienceSheet");
-  sheet.style.display = "flex";
-  setTimeout(() => sheet.classList.add("open"), 10);
-  playSound("success");
+  renderDashboard();
 }
 
-function hideScienceSheet() {
-  const sheet = $("scienceSheet");
-  sheet.classList.remove("open");
-  setTimeout(() => {
-    sheet.style.display = "none";
-  }, 300);
+function toggleLeverExpand(id) {
+  const idx = expandedLevers.indexOf(id);
+  if (idx >= 0) {
+    expandedLevers.splice(idx, 1);
+  } else {
+    expandedLevers.push(id);
+  }
+  renderCircadianLevers();
 }
 
 function addProject() {
@@ -1400,20 +1422,63 @@ function renderCircadianLevers() {
   list.innerHTML = "";
   CIRCADIAN_LEVERS.forEach(l => {
     const isChecked = S.circadianChecks && S.circadianChecks.includes(l.id);
+    const isExpanded = expandedLevers.includes(l.id);
+    
     const div = document.createElement("div");
-    div.className = `protocol-item ${isChecked ? "checked" : ""}`;
-    div.onclick = () => toggleCircadianCheck(l.id);
-    div.innerHTML = `
-      <div class="badge ${l.badge}">${l.time}</div>
-      <div style="flex-grow: 1; margin-right: 8px;">
-        <strong>${esc(l.title)} (+${l.xp} XP)</strong>
-        <p class="sub">${esc(l.desc)}</p>
-      </div>
-      <div style="display:flex; align-items:center; gap:12px;">
-        <button class="info-btn" onclick="event.stopPropagation(); showScienceSheet('${l.id}', true)" title="Bilimsel Açıklama ve Detaylı Plan">ℹ️</button>
-        <div class="chk-box">${isChecked ? "✔" : ""}</div>
-      </div>
-    `;
+    div.className = `protocol-item ${isChecked ? "checked" : ""} ${isExpanded ? "expanded" : ""}`;
+    div.onclick = () => toggleLeverExpand(l.id);
+    
+    if (isExpanded) {
+      let stepsHtml = "";
+      if (l.details && l.details.length > 0) {
+        stepsHtml = l.details.map(step => `<li><span class="bullet">⚡</span> <span class="step-text">${esc(step)}</span></li>`).join("");
+      } else {
+        stepsHtml = `<li><span class="bullet">⚡</span> <span class="step-text">${esc(l.desc)}</span></li>`;
+      }
+
+      div.innerHTML = `
+        <div class="card-header-panel" style="display:flex; justify-content:space-between; align-items:center; width:100%;">
+          <div style="display:flex; align-items:center; gap:12px;">
+            <div class="badge ${l.badge}">${l.time}</div>
+            <strong>${esc(l.title)}</strong>
+          </div>
+          <div class="expand-indicator" style="font-size:0.75rem; color:var(--pu);">▲ Kapat</div>
+        </div>
+        
+        <div class="card-details-panel" style="margin-top:15px; width:100%; display:flex; flex-direction:column; gap:15px;">
+          <div class="details-section">
+            <h4 style="font-family:var(--font-display); font-size:0.9rem; color:var(--tx-primary); margin-bottom:8px;">📋 Nasıl Yapılır? (Adım Adım Plan)</h4>
+            <ul class="expanded-steps" style="list-style:none; display:flex; flex-direction:column; gap:8px; padding-left:0;">
+              ${stepsHtml}
+            </ul>
+          </div>
+          
+          <div class="details-section science-box" style="margin-bottom:10px;">
+            <h4 style="font-family:var(--font-display); font-size:0.9rem; color:var(--tx-primary); margin-bottom:8px;">🔬 Bilimsel Gerekçesi (Biyolojik Süreç)</h4>
+            <p class="expanded-science" style="font-size:0.88rem; color:var(--tx-secondary); line-height:1.5; margin:0;">${esc(l.science)}</p>
+          </div>
+          
+          <div class="details-action-row" style="display:flex; justify-content:space-between; align-items:center;">
+            <div class="xp-badge" style="font-family:var(--font-mono); font-size:0.8rem; color:var(--cy); font-weight:700;">💰 Ödül: +${l.xp} XP</div>
+            <button class="complete-action-btn ${isChecked ? 'done' : ''}" onclick="event.stopPropagation(); toggleCircadianCheck('${l.id}')">
+              ${isChecked ? '↺ Tamamlamayı Geri Al' : '✔ Yapıldı Olarak İşaretle'}
+            </button>
+          </div>
+        </div>
+      `;
+    } else {
+      div.innerHTML = `
+        <div class="badge ${l.badge}">${l.time}</div>
+        <div style="flex-grow: 1; margin-right: 8px;">
+          <strong>${esc(l.title)} (+${l.xp} XP)</strong>
+          <p class="sub">${esc(l.desc)}</p>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div class="expand-indicator" style="font-size:0.75rem; color:var(--tx-muted)">▼ Detay</div>
+          <div class="chk-box">${isChecked ? "✔" : ""}</div>
+        </div>
+      `;
+    }
     list.appendChild(div);
   });
 }
@@ -1528,14 +1593,6 @@ window.onload = () => {
   renderDashboard();
   renderCircadianLevers();
   calculateSleepTimes(); // Bu fonksiyon içinde drawCircadianDial çağrılır
-  
-  // Bilim rehberi overlay dışına tıklanınca kapatma dinleyicisi
-  const sheet = $("scienceSheet");
-  if (sheet) {
-    sheet.onclick = (e) => {
-      if (e.target === sheet) hideScienceSheet();
-    };
-  }
   
   setInterval(drawCircadianDial, 30000);
 };

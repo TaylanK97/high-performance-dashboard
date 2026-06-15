@@ -1597,199 +1597,144 @@ hr.sep {
 }
 
 /* ==========================================================================
-   SAMSUNG HEALTH STYLE SCIENCE REHBERİ & INFO BUTTONS
+   SAMSUNG HEALTH STYLE AKORDEON GENİŞLEYEN KARTLAR & BİLİM PANELİ
    ========================================================================== */
 
-/* Info Button Style */
-.info-btn {
-  background: rgba(167, 139, 250, 0.1);
-  border: 1px solid rgba(167, 139, 250, 0.3);
-  color: var(--pu);
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-size: 0.85rem;
-  cursor: pointer;
-  transition: var(--transition);
-  outline: none;
-  flex-shrink: 0;
-}
-.info-btn:hover {
-  background: var(--pu);
-  color: #000;
-  box-shadow: 0 0 10px var(--pu-glow);
-  transform: scale(1.1);
+/* Genişleyen Kart Temel Stilleri */
+.time-item.expanded, .protocol-item.expanded {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 15px !important;
+  cursor: default !important;
+  border-color: var(--pu) !important;
+  box-shadow: 0 0 15px var(--pu-glow) !important;
+  background: rgba(26, 17, 51, 0.5) !important;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
 }
 
-/* Science Sheet Overlay */
-.science-sheet-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.75);
-  backdrop-filter: blur(12px);
-  z-index: 2000;
+/* Kapatılabilir Başlık Alanı */
+.card-header-panel {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.science-sheet-overlay.open {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-/* Science Sheet Container (Desktop) */
-.science-sheet {
-  background: #090616;
-  border: 2px solid var(--pu);
-  box-shadow: 0 0 30px var(--pu-glow);
-  border-radius: var(--radius-lg);
-  padding: 32px;
-  max-width: 550px;
-  width: 90%;
-  position: relative;
-  max-height: 85vh;
-  overflow-y: auto;
-  transform: translateY(20px) scale(0.95);
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-.science-sheet-overlay.open .science-sheet {
-  transform: translateY(0) scale(1);
-}
-
-/* Close button */
-.sheet-close {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: transparent;
-  border: none;
-  color: var(--tx-secondary);
-  font-size: 1.2rem;
+  width: 100%;
   cursor: pointer;
-  transition: var(--transition);
+  user-select: none;
 }
-.sheet-close:hover {
-  color: var(--rd);
-  transform: rotate(90deg);
-}
-
-/* Sheet Header & Badges */
-.sheet-header h2 {
-  font-size: 1.8rem;
-  margin-top: 10px;
-  background: linear-gradient(135deg, #fff, var(--tx-secondary));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.sheet-time-badge {
-  font-family: var(--font-mono);
-  font-size: 0.9rem;
-  color: var(--cy);
-  font-weight: bold;
-  margin-top: 6px;
+.card-header-panel:hover strong {
+  color: var(--pu);
+  text-shadow: 0 0 5px var(--pu-glow);
 }
 
-.sheet-type-badge {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 800;
-  padding: 3px 10px;
-  border-radius: 99px;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-family: var(--font-mono);
-}
-/* Colors */
-.sheet-type-badge.sleep, .sheet-type-badge.dark { background: rgba(255, 84, 112, 0.1); color: var(--rd); border: 1px solid rgba(255, 84, 112, 0.25); }
-.sheet-type-badge.deepwork, .sheet-type-badge.coffee { background: rgba(255, 122, 60, 0.1); color: var(--or); border: 1px solid rgba(255, 122, 60, 0.25); }
-.sheet-type-badge.posture { background: rgba(167, 139, 250, 0.1); color: var(--pu); border: 1px solid rgba(167, 139, 250, 0.25); }
-.sheet-type-badge.learning, .sheet-type-badge.water, .sheet-type-badge.sun { background: rgba(51, 214, 245, 0.1); color: var(--cy); border: 1px solid rgba(51, 214, 245, 0.25); }
-.sheet-type-badge.other, .sheet-type-badge.evening { background: rgba(61, 220, 132, 0.1); color: var(--gr); border: 1px solid rgba(61, 220, 132, 0.25); }
-
-/* Body & Sections */
-.sheet-body {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-  margin-top: 15px;
-}
-.sheet-section h3 {
-  font-size: 1.1rem;
-  margin-bottom: 12px;
-  color: var(--tx-primary);
+/* Detay Paneli ve Animasyonu */
+.card-details-panel {
+  width: 100%;
+  animation: accordionFadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
-/* Step list */
-.step-list {
+@keyframes accordionFadeIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Adım Adım Yapılacaklar Listesi */
+.expanded-steps {
   list-style: none;
+  padding-left: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 }
-.step-list li {
+.expanded-steps li {
   display: flex;
   gap: 10px;
   align-items: flex-start;
-  font-size: 0.95rem;
-  line-height: 1.5;
+  font-size: 0.92rem;
   color: var(--tx-secondary);
+  line-height: 1.5;
 }
-.step-list li .bullet {
+.expanded-steps li .bullet {
   color: var(--cy);
   text-shadow: 0 0 5px var(--cy-glow);
   font-weight: bold;
 }
 
-/* Science Explanations Box (Samsung Health-Style) */
+/* Bilim Kutusu (Samsung Health Stili) */
 .science-box {
-  background: linear-gradient(135deg, rgba(167, 139, 250, 0.06), rgba(51, 214, 245, 0.03));
-  border: 1px solid rgba(167, 139, 250, 0.15);
-  border-radius: var(--radius-md);
-  padding: 20px;
-  box-shadow: inset 0 0 15px rgba(167, 139, 250, 0.05);
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.05), rgba(51, 214, 245, 0.02)) !important;
+  border: 1px solid rgba(167, 139, 250, 0.15) !important;
+  border-radius: var(--radius-md) !important;
+  padding: 16px !important;
+  box-shadow: inset 0 0 15px rgba(167, 139, 250, 0.03) !important;
 }
-.science-box p {
-  font-size: 0.9rem;
-  color: var(--tx-secondary);
-  line-height: 1.6;
+.science-box h4 {
+  color: var(--pu) !important;
+  text-shadow: 0 0 5px var(--pu-glow);
 }
 
-/* Mobile Adjustments (Slide-Up Bottom Sheet) */
+/* Premium Neon Eylem Butonu */
+.complete-action-btn {
+  background: linear-gradient(90deg, var(--pu), #ff4d6d);
+  border: none;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 12px rgba(167, 139, 250, 0.25);
+  outline: none;
+}
+.complete-action-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(167, 139, 250, 0.4);
+}
+.complete-action-btn:active {
+  transform: translateY(0);
+}
+.complete-action-btn.done {
+  background: linear-gradient(90deg, #10b981, var(--gr)) !important;
+  color: #000 !important;
+  box-shadow: 0 4px 12px rgba(61, 220, 132, 0.2) !important;
+}
+.complete-action-btn.done:hover {
+  box-shadow: 0 6px 16px rgba(61, 220, 132, 0.35) !important;
+}
+
+/* Badge Renk Eşleşmeleri */
+.sheet-type-badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 3px 8px;
+  border-radius: 99px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-family: var(--font-mono);
+  border: 1px solid transparent;
+}
+.sheet-type-badge.sleep, .sheet-type-badge.dark { background: rgba(255, 84, 112, 0.1); color: var(--rd); border-color: rgba(255, 84, 112, 0.25); }
+.sheet-type-badge.deepwork, .sheet-type-badge.coffee { background: rgba(255, 122, 60, 0.1); color: var(--or); border-color: rgba(255, 122, 60, 0.25); }
+.sheet-type-badge.posture { background: rgba(167, 139, 250, 0.1); color: var(--pu); border-color: rgba(167, 139, 250, 0.25); }
+.sheet-type-badge.learning, .sheet-type-badge.water, .sheet-type-badge.sun { background: rgba(51, 214, 245, 0.1); color: var(--cy); border-color: rgba(51, 214, 245, 0.25); }
+.sheet-type-badge.other, .sheet-type-badge.evening { background: rgba(61, 220, 132, 0.1); color: var(--gr); border-color: rgba(61, 220, 132, 0.25); }
+
+/* Mobil Optimize */
 @media (max-width: 768px) {
-  .science-sheet-overlay {
-    align-items: flex-end; /* Sit sheet at bottom */
+  .complete-action-btn {
+    padding: 10px 16px !important;
+    font-size: 0.8rem !important;
+    width: 100%;
+    text-align: center;
   }
-  .science-sheet {
-    max-width: 100% !important;
-    width: 100% !important;
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
-    border-bottom: none !important;
-    transform: translateY(100%) !important; /* Slide from bottom */
-    transition: transform 0.3s cubic-bezier(0.1, 0.8, 0.25, 1) !important;
-    padding: 24px 20px 40px 20px !important;
-  }
-  .science-sheet-overlay.open .science-sheet {
-    transform: translateY(0) !important;
-  }
-  
-  .sheet-header h2 {
-    font-size: 1.4rem !important;
-  }
-  .sheet-close {
-    top: 16px !important;
-    right: 16px !important;
-  }
-  .science-box {
-    padding: 16px !important;
+  .details-action-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 10px !important;
+    width: 100%;
   }
 }
 
